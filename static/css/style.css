@@ -68,7 +68,7 @@ body:has(.navigation-top) .flex-container-big {
 .navigation {
     order: -1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 
@@ -107,8 +107,16 @@ body:has(.navigation-top) .flex-container-big {
     padding: 1vw;
     width: 99vw;
     text-align: start;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+.list-start {
+    display: flex;
+    height: 28vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
 }
 
 /* Placeholder for future content-item specific styles */
@@ -124,6 +132,7 @@ body:has(.navigation-top) .flex-container-big {
 /* Position logo within flex layouts */
 .logo {
     order: 1;
+    width: 45vw;
 }
 
 
@@ -164,5 +173,10 @@ body:has(.navigation-top) .flex-container-big {
     /* Slightly smaller heading relative to viewport */
     h1 {
         font-size: 3vw;
+    }
+
+    /* Adjust list to be next to each other */
+    .list-start {
+        width: auto;
     }
 }
