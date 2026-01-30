@@ -2,22 +2,47 @@
 <html lang="en">
 
 <head>
-    <title>Portfolio</title>
+    <title>Calculator</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
 
-<body>
-    <main class="flex-container">
-        <a href="https://github.com/craankism/">
-            <img class="flex-item" id="icon" src="./static/img/turtle_duck.jpg" alt="Turtle Duck from Avatar">
-        </a>
-        <nav class="navigation">
-            <a href="./index.html" class="flex-item">Home</a>
-            <a href="./pages/about_me.html" class="flex-item">About me</a>
-            <a href="./pages/projects.html" class="flex-item">Projects</a>
-            <a href="./static/img/Lebenslauf.pdf" class="flex-item">CV</a>
+<body class="combine_containers">
+    <header class="flex-container-small">
+        <nav class="navigation-top">
+            <a href="../index.html" class="flex-item-top">Home</a>
+            <a href="../pages/about_me.html" class="flex-item-top">About me</a>
+            <a href="../pages/projects.html" class="flex-item-top">Projects</a>
+            <a href="../static/img/Lebenslauf.pdf" class="flex-item-top">CV</a>
         </nav>
+    </header>
+    <main class="content">
+        <h1 class="content-item">Watering System</h1>
+        <a href="https://github.com/craankism/automatic_watering_system">
+            <img class="content-item logo" src="../static/img/GitHub_Lockup_Black.svg" alt="GitHub Link to Repository">
+        </a>
+        <p class="content-item text">
+            This is my first Arduino project. I used the Arduino framework, but with VSCode as the IDE.
+            So I had to integrate PlatformIO to manage the libraries and upload process. The system uses
+            a soil moisture sensor to determine when to water the plant. When the moisture level drops below
+            a certain threshold, the water pump is activated to water the plant for a set duration.
+            It also has an OLED display to show the current soil moisture level, air humidity and show an alarm,
+            if any of them drops below a certain threshold.
+        </p>
+        <ul class="content-item text">
+            <h2>Hardware used:</h2>
+            <li>Arduino Uno R4 WiFi</li>
+            <li>Modulino Thermo</li>
+            <li>Modulino Buzzer</li>
+            <li>Soil moisture sensor (capacitive)</li>
+            <li>OLED Display (128x64 SSD1306)</li>
+            <li>Breadboard</li>
+            <li>Water pump</li>
+            <li>Water rings</li>
+            <li>Silicone hose</li>
+            <li>Relay module</li>
+        </ul>
     </main>
 </body>
 

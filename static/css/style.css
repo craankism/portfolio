@@ -1,45 +1,168 @@
 * {
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 html {
     background-color: #FFEEDC;
-}
-body {
     margin: 0;
     padding: 0;
 }
-.flex-container {
+
+h1 {
+    font-size: 4vw;
+    text-decoration: underline;
+}
+
+/* Main layout container for each page */
+.flex-container-big {
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    height: 98vh;
+    width: 98vw;
     align-items: center;
     justify-content: space-around;
-    flex-direction: row;
+    flex-direction: column;
 }
+
+/* Shorten main container when top navigation is present */
+body:has(.navigation-top) .flex-container-big {
+    height: 80vh;
+}
+
+/* Wrapper for multiple flex items (e.g., home page links) */
+.combine_containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Large clickable tiles (links/buttons) */
 .flex-item {
-    font-size: 10vw;
+    font-size: 9vw;
     font-weight: bold;
     color: #333333;
     text-align: center;
     text-decoration: none;
+    margin: 9vw;
 }
+
+/* Hover state for large tiles */
 .flex-item:hover {
     background-color: #333333;
     color: #FFEEDC;
 }
+
+/* Home page icon styling */
 #icon {
-    height: 30vw    ;
+    height: 30vw;
     width: 30vw;
     border-radius: 50%;
 }
+
+/* Glow effect on icon hover */
 #icon:hover {
     box-shadow: 0 0 20px #333333;
 }
+
+/* Default vertical navigation (e.g., sidebar) */
 .navigation {
     order: -1;
     display: flex;
-    width: 50vw;
     justify-content: space-around;
     flex-direction: column;
+}
+
+/* Horizontal navigation bar fixed to the top */
+.navigation-top {
+    order: -1;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border-bottom: #333333 0.25vh solid;
+    width: 99vw;
+}
+
+/* Links/items inside the top navigation bar */
+.flex-item-top {
+    font-size: 4vw;
+    font-weight: bold;
+    padding: 4vw;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Hover state for top navigation items */
+.flex-item-top:hover {
+    background-color: #333333;
+    color: #FFEEDC;
+}
+
+/* Main content wrapper used on subpages */
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 4vw;
+    padding: 1vw;
+    width: 99vw;
+    text-align: start;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Placeholder for future content-item specific styles */
+/*.content-item {
+    
+}*/
+
+/* Text block width on small screens */
+.text {
+    width: 98vw;
+}
+
+/* Position logo within flex layouts */
+.logo {
+    order: 1;
+}
+
+
+/* Responsive tweaks for tablets and larger screens */
+@media (min-width: 481px) {
+
+    /* Base font size for all elements on larger screens */
+    * {
+        font-size: 20px;
+    }
+
+    /* Lay out main container horizontally instead of stacked */
+    .flex-container-big {
+        flex-direction: row;
+    }
+
+    /* Remove large margins from tiles on wider displays */
+    .flex-item {
+        margin: 0vw;
+    }
+
+    /* Refine top navigation item sizing on larger screens */
+    .flex-item-top {
+        font-size: 24px;
+        padding: 1vh;
+    }
+
+    /* Set a fixed logo width for larger viewports */
+    .logo {
+        width: 15vw;
+    }
+
+    /* Make combined-container items stand out more */
+    .combine_containers .flex-item {
+        font-size: 10vh;
+    }
+
+    /* Slightly smaller heading relative to viewport */
+    h1 {
+        font-size: 3vw;
+    }
 }

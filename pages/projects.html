@@ -2,21 +2,26 @@
 <html lang="en">
 
 <head>
-    <title>Portfolio</title>
+    <title>Projects</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
 
-<body>
-    <main class="flex-container">
-        <a href="https://github.com/craankism/">
-            <img class="flex-item" id="icon" src="./static/img/turtle_duck.jpg" alt="Turtle Duck from Avatar">
-        </a>
+<body class="combine_containers">
+    <header class="flex-container-small">
+        <nav class="navigation-top">
+            <a href="../index.html" class="flex-item-top">Home</a>
+            <a href="./about_me.html" class="flex-item-top">About me</a>
+            <a href="./projects.html" class="flex-item-top">Projects</a>
+            <a href="../static/img/Lebenslauf.pdf" class="flex-item-top">CV</a>
+        </nav>
+    </header>
+    <main class="flex-container-big">
         <nav class="navigation">
-            <a href="./index.html" class="flex-item">Home</a>
-            <a href="./pages/about_me.html" class="flex-item">About me</a>
-            <a href="./pages/projects.html" class="flex-item">Projects</a>
-            <a href="./static/img/Lebenslauf.pdf" class="flex-item">CV</a>
+            <a href="../projects/watering_system.html" class="flex-item">Watering System</a>
+            <a href="../projects/calc.html" class="flex-item">Calculator</a>
+            <a href="../projects/sorter.html" class="flex-item">Sorter</a>
         </nav>
     </main>
 </body>

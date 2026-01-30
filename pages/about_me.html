@@ -2,22 +2,36 @@
 <html lang="en">
 
 <head>
-    <title>Portfolio</title>
+    <title>About</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
 
-<body>
-    <main class="flex-container">
-        <a href="https://github.com/craankism/">
-            <img class="flex-item" id="icon" src="./static/img/turtle_duck.jpg" alt="Turtle Duck from Avatar">
-        </a>
-        <nav class="navigation">
-            <a href="./index.html" class="flex-item">Home</a>
-            <a href="./pages/about_me.html" class="flex-item">About me</a>
-            <a href="./pages/projects.html" class="flex-item">Projects</a>
-            <a href="./static/img/Lebenslauf.pdf" class="flex-item">CV</a>
+<body class="combine_containers">
+    <header class="flex-container-small">
+        <nav class="navigation-top">
+            <a href="../index.html" class="flex-item-top">Home</a>
+            <a href="./about_me.html" class="flex-item-top">About me</a>
+            <a href="./projects.html" class="flex-item-top">Projects</a>
+            <a href="../static/img/Lebenslauf.pdf" class="flex-item-top">CV</a>
         </nav>
+    </header>
+    <main class="content">
+        <a href="https://github.com/craankism/automatic_watering_system">
+            <img class="content-item logo" src="../static/img/GitHub_Lockup_Black.svg" alt="GitHub Link to Repository">
+        </a>
+        <a href="https://roadmap.sh">
+            <img class="content-item logo"
+                src="https://roadmap.sh/card/wide/687e7516d8402b4cbdcdfc33?variant=dark&roadmaps=devops%2Cgolang%2Cjavascript%2Cfrontend"
+                alt="Link to roadmap.sh" /></a>
+        <p id="text" class="content-item">
+            Hey, I'm Sascha Schwellnus aka Craankism, a passionate, mostly self-taught, developer. I'm currently enrolled
+            in a course for software development at Coders.Bay Vienna, to be more specific, Fullstack-Development. My trained profession is
+            electrical engineering with a focus on operational technology. I commited to change my career path, as I found my true passion in coding. The main aspect
+            that fascinates me, is the ability to create something out of nothing with a deep logical thinking process. I love to solve problems and
+            continuously learn new things.
+        </p>
     </main>
 </body>
 

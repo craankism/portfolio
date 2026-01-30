@@ -2,22 +2,36 @@
 <html lang="en">
 
 <head>
-    <title>Portfolio</title>
+    <title>Calculator</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
 
-<body>
-    <main class="flex-container">
-        <a href="https://github.com/craankism/">
-            <img class="flex-item" id="icon" src="./static/img/turtle_duck.jpg" alt="Turtle Duck from Avatar">
-        </a>
-        <nav class="navigation">
-            <a href="./index.html" class="flex-item">Home</a>
-            <a href="./pages/about_me.html" class="flex-item">About me</a>
-            <a href="./pages/projects.html" class="flex-item">Projects</a>
-            <a href="./static/img/Lebenslauf.pdf" class="flex-item">CV</a>
+<body class="combine_containers">
+    <header class="flex-container-small">
+        <nav class="navigation-top">
+            <a href="../index.html" class="flex-item-top">Home</a>
+            <a href="../pages/about_me.html" class="flex-item-top">About me</a>
+            <a href="../pages/projects.html" class="flex-item-top">Projects</a>
+            <a href="../static/img/Lebenslauf.pdf" class="flex-item-top">CV</a>
         </nav>
+    </header>
+    <main class="content">
+        <h1 class="content-item">Calculator</h1>
+        <a href="https://github.com/craankism/calc">
+            <img class="content-item logo" src="../static/img/GitHub_Lockup_Black.svg"
+                alt="GitHub Link to Repository">
+        </a>
+        <p id="text" class="content-item">
+            I build a simple calculator application on a webserver using HTML, CSS,
+            and JavaScript for the Frontend, Go for the Backend and GitHub Actions for the CI/CD workflow. The
+            application
+            is currently displayed on a <a href="https://calc.craankism.com">website</a>.
+            It uses a parser to transform the terms into RPN (Reverse Polish Notation).
+            After that, the RPN is calculated using the Shunting Yard algorithm.
+        </p>
+        <img class="content-item logo" src="../static/img/calc.png" alt="Calculator Demo">
     </main>
 </body>
 
