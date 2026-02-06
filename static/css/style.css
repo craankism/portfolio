@@ -80,6 +80,7 @@ body:has(.navigation-top) .flex-container-big {
     flex-direction: row;
     border-bottom: #333333 0.25vh solid;
     width: 99vw;
+    margin-top: -1vh;
 }
 
 /* Links/items inside the top navigation bar */
@@ -178,5 +179,9 @@ body:has(.navigation-top) .flex-container-big {
     /* Adjust list to be next to each other */
     .list-start {
         width: auto;
+    }
+
+    #roadmap {
+        width: 25vw;
     }
 }
