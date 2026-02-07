@@ -64,6 +64,11 @@ body:has(.navigation-top) .flex-container-big {
     box-shadow: 0 0 20px #333333;
 }
 
+.phone-photo {
+    width: 40vw;
+    height: auto;
+}
+
 /* Default vertical navigation (e.g., sidebar) */
 .navigation {
     order: -1;
