@@ -141,6 +141,10 @@ body:has(.navigation-top) .flex-container-big {
     width: 45vw;
 }
 
+#todo {
+    width: 65vw;
+}
+
 
 /* Responsive tweaks for tablets and larger screens */
 @media (min-width: 481px) {
@@ -169,6 +173,10 @@ body:has(.navigation-top) .flex-container-big {
     /* Set a fixed logo width for larger viewports */
     .logo {
         width: 15vw;
+    }
+
+    #todo {
+        width: 30vw;
     }
 
     /* Make combined-container items stand out more */
