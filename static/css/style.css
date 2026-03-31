@@ -119,10 +119,25 @@ body:has(.navigation-top) .flex-container-big {
 
 .list-start {
     display: flex;
-    height: 28vh;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     justify-content: start;
+    border: 2px solid #EFD2B8;
+    border-radius: 5%;
+    padding: 5%;
+    background-color: #F5DCC6;
+}
+
+.list-header {
+    font-size: 100%;
+}
+
+.grid {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 1fr;
+    gap: 1%;
 }
 
 /* Placeholder for future content-item specific styles */
@@ -148,6 +163,15 @@ body:has(.navigation-top) .flex-container-big {
 
 /* Responsive tweaks for tablets and larger screens */
 @media (min-width: 481px) {
+
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .list-start:hover {
+        border-color: #04030281;
+        background-color: #f6e0cc;
+    }
 
     /* Base font size for all elements on larger screens */
     * {
