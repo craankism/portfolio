@@ -9,6 +9,7 @@ This project is a personal portfolio website, created as part of a software deve
 	- Calculator
 	- Sorter
 	- Watering System
+	- Todo
 
 ## Project Structure
 
