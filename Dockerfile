@@ -16,6 +16,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY index.html /usr/share/nginx/html/index.html
 COPY projects /usr/share/nginx/html/projects
 COPY pages /usr/share/nginx/html/pages
+COPY partials /usr/share/nginx/html/partials
 COPY static /usr/share/nginx/html/static
 
 # Expose HTTP port

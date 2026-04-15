@@ -226,4 +226,8 @@ body:has(.navigation-top) .flex-container-big {
     #roadmap {
         width: 25vw;
     }
+
+    #discord_bot_popup {
+        width: 25%;
+    }
 }
