@@ -5,11 +5,15 @@ This project is a personal portfolio website, created as part of a software deve
 ## Features
 - **Homepage**: Introduction and navigation.
 - **About Me**: Information about my background and experience.
-- **Projects**: Detailed pages for individual projects, including:
+- **Projects**: Detailed pages for individual projects, 
+including:
 	- Calculator
 	- Sorter
 	- Watering System
 	- Todo
+	- Discord Bot
+- **GitHub**: Link to GitHub Account
+- **Resume**: PDF Viewer of the CV
 
 ## Project Structure
 
@@ -18,6 +22,7 @@ This project is a personal portfolio website, created as part of a software deve
 - `projects/`: Individual project pages.
 - `static/css/style.css`: Stylesheet for the site.
 - `static/img/`: Images used throughout the site.
+- `static/js/`: JavaScript files
 - `nginx.conf`: Nginx configuration for serving the site.
 - `Dockerfile` & `docker-compose.yml`: For containerized deployment.
 
@@ -32,5 +37,6 @@ To run the portfolio locally or in a container:
 
 ## Technologies Used
 - HTML, CSS
+- JavaScript
 - Docker
 - Nginx
