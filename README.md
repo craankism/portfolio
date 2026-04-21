@@ -40,3 +40,6 @@ To run the portfolio locally or in a container:
 - JavaScript
 - Docker
 - Nginx
+
+## Later Development
+- Refactor to Code to React
