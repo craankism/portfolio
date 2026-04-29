@@ -1,5 +1,6 @@
 import type { JSX } from "react";
 import { NavLink } from "react-router";
+import cv from "../../assets/cv.pdf";
 
 const TopNav = (): JSX.Element => {
   return (
@@ -17,7 +18,12 @@ const TopNav = (): JSX.Element => {
         <a href="https://github.com/craankism/" className="flex-item-top">
           GitHub
         </a>
-        <a href="/src/assets/cv.pdf" className="flex-item-top">
+        <a
+          href={cv}
+          className="flex-item-top"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Resume
         </a>
       </nav>
