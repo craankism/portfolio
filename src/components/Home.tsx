@@ -1,5 +1,6 @@
 import type { JSX } from "react";
 import { NavLink } from "react-router";
+import turtleDuck from "../assets/turtle_duck.jpg";
 
 const Home = (): JSX.Element => {
   return (
@@ -18,7 +19,7 @@ const Home = (): JSX.Element => {
             <img
               className="flex-item"
               id="icon"
-              src="../src/assets/turtle_duck.jpg"
+              src={turtleDuck}
               alt="Turtle Duck from Avatar"
             />
           </a>

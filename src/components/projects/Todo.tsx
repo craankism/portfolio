@@ -17,7 +17,7 @@ const Todo = (): JSX.Element => {
           <a href={githubLogo}>
             <img
               className="content-item logo"
-              src="../src/assets/GitHub_Lockup_Black.svg"
+              src={githubLogo}
               alt="GitHub Link to Repository"
             />
           </a>
