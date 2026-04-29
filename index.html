@@ -1,24 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./static/css/style.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-</head>
-
-<body>
-    <main class="flex-container-big">
-        <a href="https://github.com/craankism/">
-            <img class="flex-item" id="icon" src="./static/img/turtle_duck.jpg" alt="Turtle Duck from Avatar">
-        </a>
-        <nav class="navigation">
-            <a href="./pages/about_me.html" class="flex-item">About me</a>
-            <a href="./pages/projects.html" class="flex-item">Projects</a>
-            <a href="https://github.com/craankism/" class="flex-item">GitHub</a>
-        </nav>
-    </main>
-</body>
-
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

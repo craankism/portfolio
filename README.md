@@ -37,9 +37,6 @@ To run the portfolio locally or in a container:
 
 ## Technologies Used
 - HTML, CSS
-- JavaScript
+- React with TypeScript
 - Docker
 - Nginx
-
-## Later Development
-- Refactor to Code to React
