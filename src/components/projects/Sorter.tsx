@@ -1,5 +1,6 @@
 import type { JSX } from "react";
 import TopNav from "../nav/TopNav";
+import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
 
 const Sorter = (): JSX.Element => {
   return (
@@ -15,7 +16,7 @@ const Sorter = (): JSX.Element => {
           <a href="https://github.com/craankism/sorter">
             <img
               className="content-item logo"
-              src="../src/assets/GitHub_Lockup_Black.svg"
+              src={githubLogo}
               alt="GitHub Link to Repository"
             />
           </a>

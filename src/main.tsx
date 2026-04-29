@@ -27,6 +27,7 @@ createRoot(document.getElementById("root")!).render(
             path="/projects/watering_system"
             element={<WateringSystem />}
           />
+          <Route path="*" element={<App />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -10,14 +10,18 @@ const Home = (): JSX.Element => {
 
       <body>
         <main className="flex-container-big">
-          <NavLink to="https://github.com/craankism/">
+          <a
+            href="https://github.com/craankism/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="flex-item"
               id="icon"
               src="../src/assets/turtle_duck.jpg"
               alt="Turtle Duck from Avatar"
             />
-          </NavLink>
+          </a>
           <nav className="navigation">
             <NavLink to="/about" className="flex-item">
               About me
@@ -25,9 +29,14 @@ const Home = (): JSX.Element => {
             <NavLink to="/projects" className="flex-item">
               Projects
             </NavLink>
-            <NavLink to="https://github.com/craankism/" className="flex-item">
+            <a
+              href="https://github.com/craankism/"
+              className="flex-item"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GitHub
-            </NavLink>
+            </a>
           </nav>
         </main>
       </body>

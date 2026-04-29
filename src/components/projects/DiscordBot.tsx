@@ -1,5 +1,8 @@
 import type { JSX } from "react";
 import TopNav from "../nav/TopNav";
+import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
+import discordBotICS from "../../assets/discord_bot_ics.png";
+import discordBotPopup from "../../assets/discord_bot_popup.png";
 
 const DiscordBot = (): JSX.Element => {
   return (
@@ -15,7 +18,7 @@ const DiscordBot = (): JSX.Element => {
           <a href="https://github.com/craankism/discord-bot">
             <img
               className="content-item logo"
-              src="../src/assets/GitHub_Lockup_Black.svg"
+              src={githubLogo}
               alt="GitHub Link to Repository"
             />
           </a>
@@ -37,13 +40,13 @@ const DiscordBot = (): JSX.Element => {
           <img
             className="content-item phone-photo"
             id="discord_bot_popup"
-            src="../static/img/discord_bot_popup.png"
+            src={discordBotPopup}
             alt="Full photo of discord pop up"
           />
 
           <img
             className="content-item phone-photo"
-            src="../static/img/discord_bot_ics.png"
+            src={discordBotICS}
             alt="Full photo of the discord ics response"
           />
         </main>

@@ -1,5 +1,8 @@
 import type { JSX } from "react";
 import TopNav from "../nav/TopNav";
+import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
+import wateringSystem1 from "../../assets/watering_system1.jpg";
+import wateringSystem2 from "../../assets/watering_system2.jpg";
 
 const WateringSystem = (): JSX.Element => {
   return (
@@ -15,7 +18,7 @@ const WateringSystem = (): JSX.Element => {
           <a href="https://github.com/craankism/automatic_watering_system">
             <img
               className="content-item logo"
-              src=".../src/assets/GitHub_Lockup_Black.svg"
+              src={githubLogo}
               alt="GitHub Link to Repository"
             />
           </a>
@@ -44,14 +47,16 @@ const WateringSystem = (): JSX.Element => {
           </ul>
           <img
             className="content-item phone-photo"
-            src="../static/img/watering_system1.jpg"
+            src={wateringSystem1}
             alt="Full photo of the watering system"
+            loading="lazy"
           />
 
           <img
             className="content-item phone-photo"
-            src="../static/img/watering_system2.jpg"
+            src={wateringSystem2}
             alt="Full photo of the watering system"
+            loading="lazy"
           />
         </main>
       </body>

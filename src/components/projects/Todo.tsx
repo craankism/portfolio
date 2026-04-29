@@ -1,5 +1,7 @@
 import type { JSX } from "react";
 import TopNav from "../nav/TopNav";
+import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
+import todoImage from "../../assets/todo.png";
 
 const Todo = (): JSX.Element => {
   return (
@@ -12,7 +14,7 @@ const Todo = (): JSX.Element => {
         <TopNav />
         <main className="content">
           <h1 className="content-item">To-Do List</h1>
-          <a href="https://github.com/craankism/todo">
+          <a href={githubLogo}>
             <img
               className="content-item logo"
               src="../src/assets/GitHub_Lockup_Black.svg"
@@ -32,7 +34,7 @@ const Todo = (): JSX.Element => {
             <img
               id="todo"
               className="content-item logo"
-              src="../static/img/todo.png"
+              src={todoImage}
               alt="To Do List Demo"
             />
           </a>
