@@ -18,11 +18,7 @@ including:
 ## Project Structure
 
 - `index.html`: Main landing page.
-- `pages/`: Contains subpages like `about_me.html` and `projects.html`.
-- `projects/`: Individual project pages.
-- `static/css/style.css`: Stylesheet for the site.
-- `static/img/`: Images used throughout the site.
-- `static/js/`: JavaScript files
+- `src/`: React files
 - `nginx.conf`: Nginx configuration for serving the site.
 - `Dockerfile` & `docker-compose.yml`: For containerized deployment.
 
@@ -38,5 +34,9 @@ To run the portfolio locally or in a container:
 ## Technologies Used
 - HTML, CSS
 - React with TypeScript
+- React Router
 - Docker
 - Nginx
+
+## WiP
+- MUI
