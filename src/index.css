@@ -1,54 +1,15 @@
-* {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+ :root {
+    --top-nav-height: 56px;
 }
 
-html {
-    background-color: #FFEEDC;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    font-size: 4vw;
-    text-decoration: underline;
-}
-
-/* Main layout container for each page */
-.flex-container-big {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
-
-/* Shorten main container when top navigation is present */
-body:has(.navigation-top) .flex-container-big {
-    min-height: calc(100vh - 8vh);
-    height: auto;
-    margin-top: 8vh;
-}
-
-/* Wrapper for multiple flex items (e.g., home page links) */
-.combine_containers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 /* Large clickable tiles (links/buttons) */
 .flex-item {
-    font-size: 9vw;
+    font-size: clamp(1.6rem, min(10vw, 10vh), 6rem);
     font-weight: bold;
     color: #333333;
     text-align: center;
     text-decoration: none;
-    margin: 9vw;
 }
 
 /* Hover state for large tiles */
@@ -74,14 +35,6 @@ body:has(.navigation-top) .flex-container-big {
     height: auto;
 }
 
-/* Default vertical navigation (e.g., sidebar) */
-.navigation {
-    order: -1;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
-
 /* Horizontal navigation bar fixed to the top */
 .navigation-top {
     order: -1;
@@ -90,6 +43,7 @@ body:has(.navigation-top) .flex-container-big {
     flex-direction: row;
     border-bottom: #333333 0.25vh solid;
     width: 100vw;
+    align-items: center;
     backdrop-filter: blur(5px);
 }
 
@@ -118,20 +72,6 @@ body:has(.navigation-top) .flex-container-big {
     color: #FFEEDC;
 }
 
-/* Main content wrapper used on subpages */
-.content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 4vw;
-    padding: 1vw;
-    margin-top: 8vh;
-    width: 90vw;
-    text-align: start;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 .list-start {
     display: flex;
     flex-direction: column;
@@ -150,11 +90,6 @@ body:has(.navigation-top) .flex-container-big {
     font-size: 100%;
 }
 
-.grid {
-    display: grid;
-    width: 100%;
-    gap: 1%;
-}
 
 /* .content-item {
 
@@ -175,8 +110,8 @@ body:has(.navigation-top) .flex-container-big {
 /* Responsive tweaks for tablets and larger screens */
 @media (min-width: 481px) {
 
-    .grid {
-        grid-template-columns: 1fr 1fr;
+    :root {
+        --top-nav-height: 64px;
     }
 
     .list-start:hover {
@@ -187,11 +122,6 @@ body:has(.navigation-top) .flex-container-big {
     /* Base font size for all elements on larger screens */
     * {
         font-size: 20px;
-    }
-
-    /* Lay out main container horizontally instead of stacked */
-    .flex-container-big {
-        flex-direction: row;
     }
 
     /* Remove large margins from tiles on wider displays */
@@ -213,11 +143,6 @@ body:has(.navigation-top) .flex-container-big {
         width: 30vw;
     }
 
-    /* Make combined-container items stand out more */
-    .combine_containers .flex-item {
-        font-size: 10vh;
-    }
-
     /* Slightly smaller heading relative to viewport */
     h1 {
         font-size: 3vw;
@@ -228,6 +153,6 @@ body:has(.navigation-top) .flex-container-big {
     }
 
     #discord_bot_popup {
-        width: 25%;
+        width: 45%;
     }
 }
