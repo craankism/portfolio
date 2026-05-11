@@ -4,7 +4,7 @@ import cv from "../../assets/cv.pdf";
 
 const TopNav = (): JSX.Element => {
   return (
-    <header className="flex-container-small">
+    <div className="flex-container-small">
       <nav className="navigation-top">
         <NavLink to="/" className="flex-item-top">
           Home
@@ -27,7 +27,7 @@ const TopNav = (): JSX.Element => {
           Resume
         </a>
       </nav>
-    </header>
+    </div>
   );
 };
 
