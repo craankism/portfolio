@@ -2,7 +2,15 @@ import type { JSX } from "react";
 import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
 import discordBotICS from "../../assets/discord_bot_ics.png";
 import discordBotPopup from "../../assets/discord_bot_popup.png";
-import { Grid, Typography } from "@mui/material";
+import {
+  Grid,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
+import { ArrowRight } from "@mui/icons-material";
 
 const DiscordBot = (): JSX.Element => {
   return (
@@ -34,17 +42,42 @@ const DiscordBot = (): JSX.Element => {
           can run on a server via docker.
         </p>
       </Grid>
-        <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <ul className="content-item list-start">
-          <h2>Technologies used:</h2>
-          <li>JavaScript</li>
-          <li>Node</li>
-          <li>discord.js</li>
-          <li>Discord</li>
-          <li>Docker</li>
-        </ul>
+      <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
+        <List className="content-item list-start">
+          <Typography variant="h2">Technologies used:</Typography>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="JavaScript" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Node" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="discord.js" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Discord" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Docker/Docker Compose" />
+          </ListItem>
+        </List>
       </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <img
           className="content-item phone-photo"
           id="discord_bot_popup"

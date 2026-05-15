@@ -1,6 +1,14 @@
 import type { JSX } from "react";
 import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
-import { Grid, Typography } from "@mui/material";
+import {
+  Grid,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
+import { ArrowRight } from "@mui/icons-material";
 
 const Sorter = (): JSX.Element => {
   return (
@@ -30,34 +38,134 @@ const Sorter = (): JSX.Element => {
         automatically deploy new releases.
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <ul className="content-item list-start">
-          <h2>Text Input Example:</h2>
-          <li>Wishek</li>
-          <li>Davilla</li>
-          <li>Vanalstyne</li>
-          <li>Tiesiding</li>
-          <li>Honaunau</li>
-          <li>Volin</li>
-          <li>Caledonia</li>
-          <li>Monon</li>
-          <li>Loraine</li>
-          <li>Renville</li>
-        </ul>
+        <List className="content-item list-start">
+          <Typography variant="h2">Unsorted Input:</Typography>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Wishek" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Davilla" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Vanalstyne" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Tiesiding" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Honaunau" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Volin" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Caledonia" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Monon" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Loraine" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Renville" />
+          </ListItem>
+        </List>
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <ul className="content-item list-start">
-          <h2>Sorted Output Example:</h2>
-          <li>Caledonia</li>
-          <li>Davilla</li>
-          <li>Honaunau</li>
-          <li>Loraine</li>
-          <li>Monon</li>
-          <li>Renville</li>
-          <li>Tiesiding</li>
-          <li>Vanalstyne</li>
-          <li>Volin</li>
-          <li>Wishek</li>
-        </ul>
+        <List className="content-item list-start">
+          <Typography variant="h2">Sorted Output:</Typography>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Caledonia" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Davilla" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Honaunau" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Loraine" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Monon" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Renville" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Tiesiding" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Vanalstyne" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Volin" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Wishek" />
+          </ListItem>
+        </List>
       </Grid>
     </Grid>
   );
