@@ -2,7 +2,15 @@ import type { JSX } from "react";
 import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
 import wateringSystem1 from "../../assets/watering_system1.jpg";
 import wateringSystem2 from "../../assets/watering_system2.jpg";
-import { Grid, Typography } from "@mui/material";
+import {
+  Grid,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
+import { ArrowRight } from "@mui/icons-material";
 
 const WateringSystem = (): JSX.Element => {
   return (
@@ -36,20 +44,70 @@ const WateringSystem = (): JSX.Element => {
         below a certain threshold.
       </Grid>
 
-      <Grid  size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <ul className="content-item list-start">
-          <h2>Hardware used:</h2>
-          <li>Arduino Uno R4 WiFi</li>
-          <li>Modulino Thermo</li>
-          <li>Modulino Buzzer</li>
-          <li>Soil moisture sensor (capacitive)</li>
-          <li>OLED Display (128x64 SSD1306)</li>
-          <li>Breadboard</li>
-          <li>Water pump</li>
-          <li>Water rings</li>
-          <li>Silicone hose</li>
-          <li>Relay module</li>
-        </ul>
+      <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
+        <List className="content-item list-start">
+          <Typography variant="h2">Hardware used:</Typography>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Arduino Uno R4 WiFi" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Modulino Thermo" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Modulino Buzzer" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Soil moisture sensor (capacitive)" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="OLED Display (128x64 SSD1306)" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Breadboard" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Water pump" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Water rings" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Silicone hose" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <ArrowRight />
+            </ListItemIcon>
+            <ListItemText primary="Relay module" />
+          </ListItem>
+        </List>
       </Grid>
       <Grid size={{ xs: 12, md: 6 }}>
         <img
