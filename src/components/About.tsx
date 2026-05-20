@@ -10,6 +10,70 @@ import {
 } from "@mui/material";
 import { ArrowRight } from "@mui/icons-material";
 
+type AboutSection = {
+  title: string;
+  items: Array<string | JSX.Element>;
+};
+
+const aboutSections: AboutSection[] = [
+  {
+    title: "Programming languages/Frameworks I am familiar with:",
+    items: [
+      "Go",
+      "JavaScript/TypeScript",
+      "React(React Router, Zustand, MUI)",
+      "Java",
+      "Spring (Spring Boot, Spring Web, Spring Security)",
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "JPA & Hibernate",
+    ],
+  },
+  {
+    title: "Technologies I am familiar with:",
+    items: [
+      "Arduino",
+      "Git & GitHub",
+      "Linux",
+      "CI/CD with GitHub Actions",
+      "Docker",
+      "Vite",
+      "JSX",
+      "OpenAPI/SwaggerUI",
+      "JWT",
+      "Siemens S7/LOGO!",
+      "MS Office",
+    ],
+  },
+  {
+    title: "CODERS.BAY program:",
+    items: [
+      "Development of web applications",
+      "Backend-Development",
+      "Databases & Data Modeling",
+      "Agile software development",
+      "Basics in Requirements Engineering",
+      <a href="https://codersbay.wien/ams-kurse">Link to program</a>,
+    ],
+  },
+  {
+    title: "Hobbies:",
+    items: ["Gaming", "Japan", "Anime", "Coding", "Music"],
+  },
+  {
+    title: "Favourite Music Genre:",
+    items: [
+      "Rap",
+      "Drum and Bass",
+      "House",
+      "Nu Metal",
+      "Metal Core",
+      "JPop/JRock",
+    ],
+  },
+];
+
 const About = (): JSX.Element => {
   return (
     <Grid
@@ -54,249 +118,31 @@ const About = (): JSX.Element => {
           nothing with a deep logical thinking process. I love to solve problems
           and continuously learn new things.
         </Grid>
-
-        <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-          <List className="list-start">
-            <Typography variant="h2">
-              Programming languages/Frameworks I am familiar with:
-            </Typography>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Go" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="JavaScript/TypeScript" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="React(React Router, Zustand, MUI)" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Java" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Spring (Spring Boot, Spring Web, Spring Security)" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="PostgreSQL" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="HTML" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="CSS" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="JPA & Hibernate" />
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-          <List className="list-start">
-            <Typography variant="h2">
-              Technologies I am familiar with:
-            </Typography>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Arduino" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Git & GitHub" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Linux" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="CI/CD with GitHub Actions" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Docker" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Vite" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="JSX" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="OpenAPI/SwaggerUI" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="JWT" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Siemens S7/LOGO!" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="MS Office" />
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-          <List className="list-start">
-            <Typography variant="h2">CODERS.BAY program:</Typography>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Development of web applications" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Backend-Development" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Databases & Data Modeling" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Agile software development" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Basics in Requirements Engineering" />
-            </ListItem>
-            <ListItem>
-              <a href="https://codersbay.wien/ams-kurse">Link zum Kurs</a>
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-          <List className="list-start">
-            <Typography variant="h2">Hobbies:</Typography>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Gaming" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Japan" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Anime" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Coding" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Music" />
-            </ListItem>
-          </List>
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-          <List className="list-start">
-            <Typography variant="h2">Favourite Music Genre:</Typography>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Rap" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Drum and Bass" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Nu Metal" />
-            </ListItem>{" "}
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="Metal Core" />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ArrowRight />
-              </ListItemIcon>
-              <ListItemText primary="JPop/JRock" />
-            </ListItem>
-          </List>
-        </Grid>
+        {aboutSections.map((section) => (
+          <Grid
+            key={section.title}
+            size={{ xs: 12, md: 6 }}
+            sx={{ textAlign: "left" }}
+          >
+            <List className="list-start">
+              <Typography variant="h2">{section.title}</Typography>
+              {section.items.map((item, index) => (
+                <ListItem key={`${section.title}-${index}`}>
+                  {typeof item === "string" ? (
+                    <>
+                      <ListItemIcon>
+                        <ArrowRight />
+                      </ListItemIcon>
+                      <ListItemText primary={item} />
+                    </>
+                  ) : (
+                    item
+                  )}
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
+        ))}
       </Grid>
     </Grid>
   );
