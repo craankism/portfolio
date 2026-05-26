@@ -42,7 +42,7 @@ const aboutSections: AboutSection[] = [
       "JSX",
       "OpenAPI/SwaggerUI",
       "JWT",
-      "Siemens S7/LOGO!",
+      "Siemens SIMATIC S7/LOGO!",
       "MS Office",
     ],
   },
