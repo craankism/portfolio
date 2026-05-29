@@ -40,47 +40,25 @@ The production build is served through Nginx, with SPA routing configured so dee
 ```bash
 npm install
 ```
+Vite will start a local dev server with hot reload.
 
 ### Start the development server
+
 
 ```bash
 npm run dev
 ```
 
-Vite will start a local dev server with hot reload.
-
-### Build for production
-
-```bash
-npm run build
-```
-
-The compiled output is written to `dist/`.
-
-### Preview the production build locally
-
-```bash
-npm run preview
-```
-
 ## Docker
-
-### Build the image
-
-```bash
-docker build -t portfolio .
-```
 
 ### Run with Docker Compose
 
 ```bash
-docker compose up --build
+docker compose build
 ```
 
-The Compose setup expects an external Docker network named `nginx_proxy_manager_default`. Create it first if it does not already exist:
-
 ```bash
-docker network create nginx_proxy_manager_default
+docker compose up --build
 ```
 
 ## Project Structure
@@ -91,10 +69,3 @@ docker network create nginx_proxy_manager_default
 - `Dockerfile` multi-stage build for production deployment
 - `docker-compose.yml` container orchestration
 - `nginx.conf` Nginx config for static hosting and SPA fallback
-
-## Available Scripts
-
-- `npm run dev` starts the Vite dev server
-- `npm run build` runs TypeScript compilation and creates a production build
-- `npm run preview` serves the production build locally
-- `npm run lint` runs ESLint
