@@ -1,36 +1,53 @@
 import type { JSX } from "react";
-import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
+import githubLogo from "../../assets/GitHub_Invertocat_Black.svg";
 import wateringSystem1 from "../../assets/watering_system1.jpg";
 import wateringSystem2 from "../../assets/watering_system2.jpg";
 import {
+  Box,
   Grid,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { ArrowRight } from "@mui/icons-material";
+import {
+  githubLogoStyleMD,
+  githubLogoStyleXS,
+} from "../../constants/githubLogoStyle";
 
 const WateringSystem = (): JSX.Element => {
+  const theme = useTheme();
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Grid
       container
       spacing={2}
       sx={{ textAlign: "center", alignItems: "center", pt: { xs: 2, md: 3 } }}
     >
-      <title>Watering System</title>
-      <Grid size={6}>
+      <Grid size={12}>
         <Typography variant="h1">Watering System</Typography>
       </Grid>
-      <Grid size={6}>
-        <a href="https://github.com/craankism/automatic_watering_system">
+      <Grid size={12}>
+        <Box
+          onClick={() =>
+            window.open(
+              "https://github.com/craankism/automatic_watering_system",
+              "_blank",
+            )
+          }
+          sx={{ cursor: "pointer" }}
+        >
           <img
             className="content-item logo"
             src={githubLogo}
-            alt="GitHub Link to Repository"
+            alt="GitLab Link to Repository"
+            style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
           />
-        </a>
+        </Box>
       </Grid>
 
       <Grid size={12}>
@@ -46,7 +63,9 @@ const WateringSystem = (): JSX.Element => {
 
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
         <List className="content-item list-start">
-          <Typography variant="h2">Hardware used:</Typography>
+          <Typography variant="h2" sx={{ ml: 2 }}>
+            Hardware used:
+          </Typography>
           <ListItem>
             <ListItemIcon>
               <ArrowRight />

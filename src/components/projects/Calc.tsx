@@ -1,27 +1,33 @@
 import type { JSX } from "react";
-import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
+import githubLogo from "../../assets/GitHub_Invertocat_Black.svg";
 import calcImage from "../../assets/calc.png";
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { githubLogoStyleMD, githubLogoStyleXS } from "../../constants/githubLogoStyle";
 
 const Calc = (): JSX.Element => {
+    const theme = useTheme();
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Grid
       container
       spacing={2}
       sx={{ textAlign: "center", alignItems: "center", pt: { xs: 2, md: 3 } }}
     >
-      <title>Calculator</title>
-      <Grid size={6}>
-        <Typography variant="h1">Calculator System</Typography>
+      <Grid size={12}>
+        <Typography variant="h1">Calculator</Typography>
       </Grid>
-      <Grid size={6}>
-        <a href="https://github.com/craankism/calc">
+      <Grid size={12}>
+        <Box
+          onClick={() => window.open("https://github.com/craankism/calc", "_blank")}
+          sx={{ cursor: "pointer" }}
+        >
           <img
             className="content-item logo"
             src={githubLogo}
-            alt="GitHub Link to Repository"
+            alt="GitLab Link to Repository"
+            style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
           />
-        </a>
+        </Box>
       </Grid>
       <Grid size={12}>
         <p className="content-item">

@@ -18,52 +18,9 @@
     color: #FFEEDC;
 }
 
-/* Home page icon styling */
-#icon {
-    height: 30vw;
-    width: 30vw;
-    border-radius: 50%;
-}
-
-/* Glow effect on icon hover */
-#icon:hover {
-    box-shadow: 0 0 20px #333333;
-}
-
 .phone-photo {
     width: 40vw;
     height: auto;
-}
-
-/* Horizontal navigation bar fixed to the top */
-.navigation-top {
-    order: -1;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    border-bottom: #333333 0.25vh solid;
-    width: 100vw;
-    align-items: center;
-    backdrop-filter: blur(5px);
-}
-
-.flex-container-small {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-/* Links/items inside the top navigation bar */
-.flex-item-top {
-    font-size: 4vw;
-    font-weight: bold;
-    width: 20%;
-    padding: 1vh 0;
-    color: #333333;
-    text-align: center;
-    text-decoration: none;
 }
 
 /* Hover state for top navigation items */
@@ -137,11 +94,6 @@
 
     #todo {
         width: 30vw;
-    }
-
-    /* Slightly smaller heading relative to viewport */
-    h1 {
-        font-size: 3vw;
     }
 
     #roadmap {
