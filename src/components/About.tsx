@@ -130,7 +130,7 @@ const About = (): JSX.Element => {
             sx={{ textAlign: "left" }}
           >
             <List className="list-start">
-              <Typography variant="h2">{section.title}</Typography>
+              <Typography variant="h2" sx={{ ml: 2 }}>{section.title}</Typography>
               {section.items.map((item, index) => (
                 <ListItem key={`${section.title}-${index}`}>
                   {typeof item === "string" ? (
