@@ -1,35 +1,46 @@
 import type { JSX } from "react";
-import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
+import githubLogo from "../../assets/GitHub_Invertocat_Black.svg";
 import {
+  Box,
   Grid,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { ArrowRight } from "@mui/icons-material";
+import { githubLogoStyleMD, githubLogoStyleXS } from "../../constants/githubLogoStyle";
 
 const Sorter = (): JSX.Element => {
+  const theme = useTheme();
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Grid
       container
       spacing={2}
       sx={{ textAlign: "center", alignItems: "center", pt: { xs: 2, md: 3 } }}
     >
-      <title>Sorter</title>
-      <Grid size={6}>
+      <Grid size={12
+
+      }>
         <Typography variant="h1">Sorter</Typography>
       </Grid>
 
-      <Grid size={6}>
-        <a href="https://github.com/craankism/sorter">
+      <Grid size={12}>
+        <Box
+          onClick={() => window.open("https://github.com/craankism/sorter", "_blank")}
+          sx={{ cursor: "pointer" }}
+        >
           <img
             className="content-item logo"
             src={githubLogo}
-            alt="GitHub Link to Repository"
+            alt="GitLab Link to Repository"
+            style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
           />
-        </a>
+        </Box>
       </Grid>
 
       <Grid size={12}>
@@ -39,7 +50,9 @@ const Sorter = (): JSX.Element => {
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
         <List className="content-item list-start">
-          <Typography variant="h2">Unsorted Input:</Typography>
+          <Typography variant="h2" sx={{ ml: 2 }}>
+            Unsorted Input:
+          </Typography>
           <ListItem>
             <ListItemIcon>
               <ArrowRight />
@@ -104,7 +117,9 @@ const Sorter = (): JSX.Element => {
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
         <List className="content-item list-start">
-          <Typography variant="h2">Sorted Output:</Typography>
+          <Typography variant="h2" sx={{ ml: 2 }}>
+            Sorted Output:
+          </Typography>
           <ListItem>
             <ListItemIcon>
               <ArrowRight />
