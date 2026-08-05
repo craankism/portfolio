@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { useEffect } from "react";
 import githubLogo from "../assets/GitHub_Lockup_Black.svg";
 import {
   Grid,
@@ -75,6 +76,10 @@ const aboutSections: AboutSection[] = [
 ];
 
 const About = (): JSX.Element => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Grid
       container
