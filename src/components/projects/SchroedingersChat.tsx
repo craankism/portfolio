@@ -54,7 +54,7 @@ const SchroedingersChat = (): JSX.Element => {
       </Grid>
       <Grid size={12}>
         <Box
-          onClick={() => window.open("https://github.com/craankism", "_blank")}
+          onClick={() => window.open("https://github.com/craankism/schroedingers_chat", "_blank")}
           sx={{ cursor: "pointer" }}
         >
           <img
