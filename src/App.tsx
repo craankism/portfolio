@@ -6,23 +6,13 @@ import WateringSystem from "./components/projects/WateringSystem";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import { ThemeProvider } from "@emotion/react";
-import { Container, createTheme, CssBaseline } from "@mui/material";
+import { Container, CssBaseline } from "@mui/material";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import TopNav from "./components/nav/TopNav";
-
-const theme = createTheme({
-  palette: {
-    background: { default: "#FFEEDC" },
-  },
-  typography: {
-    h1: { fontSize: "2.5rem", textDecoration: "underline" },
-    h2: { fontSize: "2rem" },
-    body1: { fontSize: "1rem" },
-  },
-});
+import theme from "./theme";
 
 const App = (): JSX.Element => {
   const { pathname } = useLocation();

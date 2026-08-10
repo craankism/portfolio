@@ -2,8 +2,8 @@ import Modal from "@mui/material/Modal";
 import type { JSX } from "@emotion/react/jsx-runtime";
 import { usePropStore } from "../../stores/PropStore";
 import { Button, Stack } from "@mui/material";
-import { buttonStyle } from "../../constants/buttonStyle";
 import { useNavigate } from "react-router";
+import { Star } from "@mui/icons-material";
 
 const style = {
   position: "absolute",
@@ -47,11 +47,8 @@ const ProjectMenuModal = (): JSX.Element => {
     >
       <Stack sx={style} spacing={2}>
         {projects.map((project) => (
-          <Button
-            key={project}
-            sx={buttonStyle}
-            onClick={() => handleProjectClick(project)}
-          >
+          <Button key={project} onClick={() => handleProjectClick(project)}>
+            {project === "Schroedinger's Chat" ? <Star /> : ""}
             {project}
           </Button>
         ))}

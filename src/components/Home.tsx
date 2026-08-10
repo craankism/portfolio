@@ -3,7 +3,6 @@ import { useNavigate } from "react-router";
 import turtleDuck from "../assets/turtle_duck.jpg";
 import { Box, Button, Grid, Stack } from "@mui/material";
 import ProjectMenuModal from "./modals/ProjectsMenuModal";
-import { buttonStyle } from "../constants/buttonStyle";
 import { usePropStore } from "../stores/PropStore";
 
 const Home = (): JSX.Element => {
@@ -24,21 +23,21 @@ const Home = (): JSX.Element => {
           <Stack>
             <Button
               fullWidth
-              sx={{ ...buttonStyle, minHeight: "80px", fontSize: "1.5rem" }}
+              sx={{ minHeight: "80px", fontSize: "1.5rem" }}
               onClick={() => navigate("/about")}
             >
               About me
             </Button>
             <Button
               fullWidth
-              sx={{ ...buttonStyle, minHeight: "80px", fontSize: "1.5rem" }}
+              sx={{ minHeight: "80px", fontSize: "1.5rem" }}
               onClick={() => setOpenProjectsModal(true)}
             >
               Projects
             </Button>
             <Button
               fullWidth
-              sx={{ ...buttonStyle, minHeight: "80px", fontSize: "1.5rem" }}
+              sx={{ minHeight: "80px", fontSize: "1.5rem" }}
               onClick={() =>
                 window.open("https://github.com/craankism", "_blank")
               }
@@ -59,7 +58,7 @@ const Home = (): JSX.Element => {
               src={turtleDuck}
               alt="Turtle Duck from Avatar"
               sx={{
-                width: {xs: "70vw",md: "30vw"},
+                width: { xs: "70vw", md: "30vw" },
                 borderRadius: "50%",
                 "&:hover": {
                   boxShadow: "0 0 20px #333333",
