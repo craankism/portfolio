@@ -2,8 +2,6 @@ import type { JSX } from "react";
 import "./App.css";
 import Home from "./components/Home";
 import { Route, Routes, useLocation } from "react-router";
-import WateringSystem from "./components/projects/WateringSystem";
-import About from "./components/About";
 import Projects from "./components/Projects";
 import { ThemeProvider } from "@emotion/react";
 import { Container, CssBaseline } from "@mui/material";
@@ -13,6 +11,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import TopNav from "./components/nav/TopNav";
 import theme from "./theme";
+import About from "./components/About";
 
 const App = (): JSX.Element => {
   const { pathname } = useLocation();
@@ -28,10 +27,6 @@ const App = (): JSX.Element => {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
-            <Route
-              path="/projects/watering_system"
-              element={<WateringSystem />}
-            />
           </Route>
         </Routes>
       </Container>

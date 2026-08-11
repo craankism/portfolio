@@ -103,13 +103,78 @@ const theme = createTheme({
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
+          padding: "12px",
+          gap: "8px",
         },
       },
     },
     MuiListItem: {
       styleOverrides: {
         root: {
-          marginTop: "10px",
+          borderRadius: "8px",
+          border: `1px solid ${colors.border.default}`,
+          backgroundColor: colors.background.paper,
+          padding: "12px 16px",
+          transition: "all 0.3s ease",
+          "&:hover": {
+            backgroundColor: colors.background.hover,
+            borderColor: colors.border.hover,
+            transform: "translateX(4px)",
+            boxShadow: "2px 2px 8px rgba(0, 0, 0, 0.1)",
+          },
+        },
+      },
+    },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "8px",
+          padding: "12px 16px",
+          transition: "all 0.3s ease",
+          "&:hover": {
+            backgroundColor: colors.background.hover,
+            transform: "translateX(4px)",
+          },
+        },
+      },
+    },
+    MuiListItemText: {
+      styleOverrides: {
+        root: {
+          margin: 0,
+        },
+        primary: {
+          fontWeight: 500,
+          color: colors.text.primary,
+        },
+        secondary: {
+          color: colors.text.primary,
+          opacity: 0.7,
+        },
+      },
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          color: colors.primary,
+          minWidth: "40px",
+        },
+      },
+    },
+    MuiListSubheader: {
+      styleOverrides: {
+        root: {
+          backgroundColor: colors.background.paper,
+          color: colors.text.primary,
+          fontSize: "1.1rem",
+          fontWeight: 700,
+          padding: "16px 16px 8px 16px",
+          lineHeight: "1.5",
+          borderBottom: `2px solid ${colors.border.default}`,
+          marginBottom: "8px",
+          position: "sticky",
+          top: "var(--top-nav-height)",
+          zIndex: 1,
         },
       },
     },

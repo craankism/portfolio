@@ -9,6 +9,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  ListSubheader,
   Typography,
   useMediaQuery,
   useTheme,
@@ -63,9 +64,7 @@ const WateringSystem = (): JSX.Element => {
 
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
         <List className="content-item list-start">
-          <Typography variant="h2" sx={{ ml: 2 }}>
-            Hardware used:
-          </Typography>
+          <ListSubheader>Hardware used:</ListSubheader>
           <ListItem>
             <ListItemIcon>
               <ArrowRight />

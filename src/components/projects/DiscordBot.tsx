@@ -9,6 +9,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  ListSubheader,
   Typography,
   useMediaQuery,
   useTheme,
@@ -33,7 +34,9 @@ const DiscordBot = (): JSX.Element => {
       </Grid>
       <Grid size={12}>
         <Box
-          onClick={() => window.open("https://github.com/craankism/discord-bot", "_blank")}
+          onClick={() =>
+            window.open("https://github.com/craankism/discord-bot", "_blank")
+          }
           sx={{ cursor: "pointer" }}
         >
           <img
@@ -56,9 +59,7 @@ const DiscordBot = (): JSX.Element => {
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
         <List className="content-item list-start">
-          <Typography variant="h2" sx={{ ml: 2 }}>
-            Technologies used:
-          </Typography>
+          <ListSubheader>Technologies used:</ListSubheader>
           <ListItem>
             <ListItemIcon>
               <ArrowRight />

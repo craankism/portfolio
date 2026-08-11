@@ -1,13 +1,12 @@
 import type { JSX } from "react";
-import { useNavigate } from "react-router";
 import turtleDuck from "../assets/turtle_duck.jpg";
 import { Box, Button, Grid, Stack } from "@mui/material";
 import ProjectMenuModal from "./modals/ProjectsMenuModal";
 import { usePropStore } from "../stores/PropStore";
+import AboutMenuModal from "./modals/AboutMenuModal";
 
 const Home = (): JSX.Element => {
-  const navigate = useNavigate();
-  const { setOpenProjectsModal } = usePropStore();
+  const { setOpenProjectsModal, setOpenAboutModal } = usePropStore();
   return (
     <>
       <Grid
@@ -24,7 +23,7 @@ const Home = (): JSX.Element => {
             <Button
               fullWidth
               sx={{ minHeight: "80px", fontSize: "1.5rem" }}
-              onClick={() => navigate("/about")}
+              onClick={() => setOpenAboutModal(true)}
             >
               About me
             </Button>
@@ -69,6 +68,7 @@ const Home = (): JSX.Element => {
         </Grid>
       </Grid>
       <ProjectMenuModal />
+      <AboutMenuModal />
     </>
   );
 };

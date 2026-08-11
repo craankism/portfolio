@@ -7,12 +7,16 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  ListSubheader,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { ArrowRight } from "@mui/icons-material";
-import { githubLogoStyleMD, githubLogoStyleXS } from "../../constants/githubLogoStyle";
+import {
+  githubLogoStyleMD,
+  githubLogoStyleXS,
+} from "../../constants/githubLogoStyle";
 
 const Sorter = (): JSX.Element => {
   const theme = useTheme();
@@ -23,15 +27,15 @@ const Sorter = (): JSX.Element => {
       spacing={2}
       sx={{ textAlign: "center", alignItems: "center", pt: { xs: 2, md: 3 } }}
     >
-      <Grid size={12
-
-      }>
+      <Grid size={12}>
         <Typography variant="h1">Sorter</Typography>
       </Grid>
 
       <Grid size={12}>
         <Box
-          onClick={() => window.open("https://github.com/craankism/sorter", "_blank")}
+          onClick={() =>
+            window.open("https://github.com/craankism/sorter", "_blank")
+          }
           sx={{ cursor: "pointer" }}
         >
           <img
@@ -50,9 +54,7 @@ const Sorter = (): JSX.Element => {
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
         <List className="content-item list-start">
-          <Typography variant="h2" sx={{ ml: 2 }}>
-            Unsorted Input:
-          </Typography>
+          <ListSubheader>Unsorted Input:</ListSubheader>
           <ListItem>
             <ListItemIcon>
               <ArrowRight />
@@ -117,9 +119,7 @@ const Sorter = (): JSX.Element => {
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
         <List className="content-item list-start">
-          <Typography variant="h2" sx={{ ml: 2 }}>
-            Sorted Output:
-          </Typography>
+          <ListSubheader>Sorted Output:</ListSubheader>
           <ListItem>
             <ListItemIcon>
               <ArrowRight />

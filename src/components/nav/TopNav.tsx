@@ -4,10 +4,11 @@ import { AppBar, Box, Button, Toolbar } from "@mui/material";
 import { useNavigate } from "react-router";
 import { usePropStore } from "../../stores/PropStore";
 import ProjectMenuModal from "../modals/ProjectsMenuModal";
+import AboutMenuModal from "../modals/AboutMenuModal";
 
 const TopNav = (): JSX.Element => {
   const navigate = useNavigate();
-  const { setOpenProjectsModal } = usePropStore();
+  const { setOpenProjectsModal, setOpenAboutModal } = usePropStore();
 
   return (
     <Box sx={{ flexGrow: 1, order: -1 }}>
@@ -21,7 +22,7 @@ const TopNav = (): JSX.Element => {
       >
         <Toolbar sx={{ justifyContent: "space-around" }}>
           <Button onClick={() => navigate("/")}>Home</Button>
-          <Button onClick={() => navigate("/about")}>About</Button>
+          <Button onClick={() => setOpenAboutModal(true)}>About</Button>
           <Button onClick={() => setOpenProjectsModal(true)}>Projects</Button>
           <Button
             onClick={() =>
@@ -34,6 +35,7 @@ const TopNav = (): JSX.Element => {
         </Toolbar>
       </AppBar>
       <ProjectMenuModal />
+      <AboutMenuModal />
     </Box>
   );
 };

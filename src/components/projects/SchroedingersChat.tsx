@@ -20,6 +20,7 @@ import {
   Typography,
   useTheme,
   useMediaQuery,
+  ListSubheader,
 } from "@mui/material";
 import { ArrowRight, ChevronLeft, ChevronRight } from "@mui/icons-material";
 import {
@@ -54,7 +55,12 @@ const SchroedingersChat = (): JSX.Element => {
       </Grid>
       <Grid size={12}>
         <Box
-          onClick={() => window.open("https://github.com/craankism/schroedingers_chat", "_blank")}
+          onClick={() =>
+            window.open(
+              "https://github.com/craankism/schroedingers_chat",
+              "_blank",
+            )
+          }
           sx={{ cursor: "pointer" }}
         >
           <img
@@ -79,9 +85,7 @@ const SchroedingersChat = (): JSX.Element => {
 
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
         <List className="content-item list-start">
-          <Typography variant="h2" sx={{ ml: 2 }}>
-            Key Features:
-          </Typography>
+          <ListSubheader>Key Features:</ListSubheader>
           <ListItem>
             <ListItemIcon>
               <ArrowRight />
@@ -123,9 +127,7 @@ const SchroedingersChat = (): JSX.Element => {
 
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
         <List className="content-item list-start">
-          <Typography variant="h2" sx={{ ml: 2 }}>
-            Tech Stack:
-          </Typography>
+          <ListSubheader>Tech Stack:</ListSubheader>
           <ListItem>
             <ListItemIcon>
               <ArrowRight />
