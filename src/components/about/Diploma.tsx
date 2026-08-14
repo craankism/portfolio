@@ -11,12 +11,7 @@ import {
   ListSubheader,
   Typography,
 } from "@mui/material";
-import {
-  ArrowRight,
-  Block,
-  ChevronLeft,
-  ChevronRight,
-} from "@mui/icons-material";
+import { ArrowRight, ChevronLeft, ChevronRight } from "@mui/icons-material";
 import DiplomaImg1 from "../../assets/Diplom Full-Stack Developer1.jpg";
 import DiplomaImg2 from "../../assets/Diplom Full-Stack Developer2.jpg";
 
@@ -120,7 +115,13 @@ const Diploma = (): JSX.Element => {
           </Button>
         </Grid>
         <Grid size={10}>
-          <Box sx={{ px: { xs: 0.5, sm: 1 }, width: { md: "40vw" }, justifySelf: "center" }}>
+          <Box
+            sx={{
+              px: { xs: 0.5, sm: 1 },
+              width: { md: "40vw" },
+              justifySelf: "center",
+            }}
+          >
             <img
               src={images[currentImageIndex]}
               alt="Screenshots of Schroedinger's Chat application"
