@@ -2,10 +2,13 @@ import type { JSX } from "react";
 import githubLogo from "../../assets/GitHub_Invertocat_Black.svg";
 import calcImage from "../../assets/calc.png";
 import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { githubLogoStyleMD, githubLogoStyleXS } from "../../constants/githubLogoStyle";
+import {
+  githubLogoStyleMD,
+  githubLogoStyleXS,
+} from "../../constants/githubLogoStyle";
 
 const Calc = (): JSX.Element => {
-    const theme = useTheme();
+  const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Grid
@@ -18,7 +21,9 @@ const Calc = (): JSX.Element => {
       </Grid>
       <Grid size={12}>
         <Box
-          onClick={() => window.open("https://github.com/craankism/calc", "_blank")}
+          onClick={() =>
+            window.open("https://github.com/craankism/calc", "_blank")
+          }
           sx={{ cursor: "pointer" }}
         >
           <img
@@ -40,13 +45,12 @@ const Calc = (): JSX.Element => {
         </p>
       </Grid>
       <Grid size={12}>
-        <a href="https://calc.craankism.com">
-          <img
-            className="content-item logo"
-            src={calcImage}
-            alt="Calculator Demo"
-          />
-        </a>
+        <Box
+          onClick={() => window.open("https://calc.craankism.com")}
+          sx={{ cursor: "pointer", width: { md: "30vw" }, mx: "auto" }}
+        >
+          <img src={calcImage} alt="Calculator Demo" />
+        </Box>
       </Grid>
     </Grid>
   );

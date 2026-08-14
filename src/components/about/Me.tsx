@@ -2,6 +2,7 @@ import type { JSX } from "react";
 import { useEffect } from "react";
 import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
 import {
+  Box,
   Grid,
   List,
   ListItem,
@@ -89,14 +90,12 @@ const Me = (): JSX.Element => {
         </a>
       </Grid>
       <Grid size={6}>
-        <a href="https://roadmap.sh">
+        <Box sx={{width: {md: "25vw"}}}>
           <img
-            id="roadmap"
-            className="content-item logo"
-            src="https://roadmap.sh/card/wide/687e7516d8402b4cbdcdfc33?variant=dark&roadmaps=full-stack%2Cgolang%2Cjavascript%2Cjava"
-            alt="Link to roadmap.sh"
+            src="https://roadmap.sh/card/wide/687e7516d8402b4cbdcdfc33?variant=dark&roadmaps=java%2Cjavascript%2Csql%2Cfull-stack"
+            alt="roadmap.sh profile roadmap"
           />
-        </a>
+        </Box>
       </Grid>
       <Grid
         container

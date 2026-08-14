@@ -11,7 +11,12 @@ import {
   ListSubheader,
   Typography,
 } from "@mui/material";
-import { ArrowRight, ChevronLeft, ChevronRight } from "@mui/icons-material";
+import {
+  ArrowRight,
+  Block,
+  ChevronLeft,
+  ChevronRight,
+} from "@mui/icons-material";
 import DiplomaImg1 from "../../assets/Diplom Full-Stack Developer1.jpg";
 import DiplomaImg2 from "../../assets/Diplom Full-Stack Developer2.jpg";
 
@@ -115,12 +120,11 @@ const Diploma = (): JSX.Element => {
           </Button>
         </Grid>
         <Grid size={10}>
-          <Box sx={{ px: { xs: 0.5, sm: 1 } }}>
+          <Box sx={{ px: { xs: 0.5, sm: 1 }, width: { md: "40vw" }, justifySelf: "center" }}>
             <img
               src={images[currentImageIndex]}
-              alt="Screenshot of Schroedinger's Chat application"
+              alt="Screenshots of Schroedinger's Chat application"
               loading="lazy"
-              style={{ maxWidth: "100%", height: "auto" }}
             />
           </Box>
         </Grid>
@@ -138,16 +142,6 @@ const Diploma = (): JSX.Element => {
             <ChevronRight />
           </Button>
         </Grid>
-      </Grid>
-      <Grid size={{ xs: 12, md: 4 }}>
-        <a href="https://roadmap.sh">
-          <img
-            id="roadmap"
-            className="content-item logo"
-            src="https://roadmap.sh/card/wide/687e7516d8402b4cbdcdfc33?variant=dark&roadmaps=full-stack%2Cgolang%2Cjavascript%2Cjava"
-            alt="Link to roadmap.sh"
-          />
-        </a>
       </Grid>
       <Grid
         container

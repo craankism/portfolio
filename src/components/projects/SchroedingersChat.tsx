@@ -71,6 +71,53 @@ const SchroedingersChat = (): JSX.Element => {
           />
         </Box>
       </Grid>
+      <Grid
+        container
+        spacing={0}
+        size={12}
+        sx={{ alignItems: "stretch", justifyContent: "center" }}
+      >
+        <Grid size={1} sx={{ display: "flex" }}>
+          <Button
+            onClick={() =>
+              setCurrentImageIndex(
+                (prev) => (prev - 1 + images.length) % images.length,
+              )
+            }
+            sx={{
+              minWidth: { xs: "auto", sm: "64px" },
+              p: { xs: 0.5, sm: 1 },
+              height: "100%",
+            }}
+          >
+            <ChevronLeft />
+          </Button>
+        </Grid>
+        <Grid size={10}>
+          <Box sx={{ px: { xs: 0.5, sm: 1 } }}>
+            <img
+              src={images[currentImageIndex]}
+              alt="Screenshot of Schroedinger's Chat application"
+              loading="lazy"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </Box>
+        </Grid>
+        <Grid size={1} sx={{ display: "flex" }}>
+          <Button
+            onClick={() =>
+              setCurrentImageIndex((prev) => (prev + 1) % images.length)
+            }
+            sx={{
+              minWidth: { xs: "auto", sm: "64px" },
+              p: { xs: 0.5, sm: 1 },
+              height: "100%",
+            }}
+          >
+            <ChevronRight />
+          </Button>
+        </Grid>
+      </Grid>
 
       <Grid size={12}>
         Schroedinger's Chat is a fully self-hosted, privacy-focused chat and
@@ -165,54 +212,6 @@ const SchroedingersChat = (): JSX.Element => {
             <ListItemText primary="Nginx + Docker Compose" />
           </ListItem>
         </List>
-      </Grid>
-
-      <Grid
-        container
-        spacing={0}
-        size={12}
-        sx={{ alignItems: "stretch", justifyContent: "center" }}
-      >
-        <Grid size={1} sx={{ display: "flex" }}>
-          <Button
-            onClick={() =>
-              setCurrentImageIndex(
-                (prev) => (prev - 1 + images.length) % images.length,
-              )
-            }
-            sx={{
-              minWidth: { xs: "auto", sm: "64px" },
-              p: { xs: 0.5, sm: 1 },
-              height: "100%",
-            }}
-          >
-            <ChevronLeft />
-          </Button>
-        </Grid>
-        <Grid size={10}>
-          <Box sx={{ px: { xs: 0.5, sm: 1 } }}>
-            <img
-              src={images[currentImageIndex]}
-              alt="Screenshot of Schroedinger's Chat application"
-              loading="lazy"
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </Box>
-        </Grid>
-        <Grid size={1} sx={{ display: "flex" }}>
-          <Button
-            onClick={() =>
-              setCurrentImageIndex((prev) => (prev + 1) % images.length)
-            }
-            sx={{
-              minWidth: { xs: "auto", sm: "64px" },
-              p: { xs: 0.5, sm: 1 },
-              height: "100%",
-            }}
-          >
-            <ChevronRight />
-          </Button>
-        </Grid>
       </Grid>
     </Grid>
   );

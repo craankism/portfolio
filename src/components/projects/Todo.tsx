@@ -15,7 +15,6 @@ const Todo = (): JSX.Element => {
       container
       spacing={2}
       sx={{
-        alignItems: "center",
         textAlign: "center",
         pt: { xs: 2, md: 3 },
       }}
@@ -25,11 +24,12 @@ const Todo = (): JSX.Element => {
       </Grid>
       <Grid size={12}>
         <Box
-          onClick={() => window.open("https://github.com/craankism/todo", "_blank")}
+          onClick={() =>
+            window.open("https://github.com/craankism/todo", "_blank")
+          }
           sx={{ cursor: "pointer" }}
         >
           <img
-            className="content-item logo"
             src={githubLogo}
             alt="GitLab Link to Repository"
             style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
@@ -46,14 +46,9 @@ const Todo = (): JSX.Element => {
         loads the tasks inside the file.
       </Grid>
       <Grid size={12}>
-        <a href="https://calc.craankism.com">
-          <img
-            id="todo"
-            className="content-item logo"
-            src={todoImage}
-            alt="To Do List Demo"
-          />
-        </a>
+        <Box sx={{ width: { md: "40vw" }, mx: "auto" }}>
+          <img src={todoImage} alt="To Do List Demo" />
+        </Box>
       </Grid>
     </Grid>
   );

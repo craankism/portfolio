@@ -27,7 +27,7 @@ const WateringSystem = (): JSX.Element => {
     <Grid
       container
       spacing={2}
-      sx={{ textAlign: "center", alignItems: "center", pt: { xs: 2, md: 3 } }}
+      sx={{ textAlign: "center", alignItems: "start", pt: { xs: 2, md: 3 } }}
     >
       <Grid size={12}>
         <Typography variant="h1">Watering System</Typography>
@@ -129,15 +129,11 @@ const WateringSystem = (): JSX.Element => {
       </Grid>
       <Grid size={{ xs: 12, md: 6 }}>
         <img
-          className="content-item phone-photo"
           src={wateringSystem1}
           alt="Full photo of the watering system"
           loading="lazy"
         />
-      </Grid>
-      <Grid size={12}>
         <img
-          className="content-item phone-photo"
           src={wateringSystem2}
           alt="Full photo of the watering system"
           loading="lazy"

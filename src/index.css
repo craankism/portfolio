@@ -1,106 +1,106 @@
- :root {
-    --top-nav-height: 56px;
+:root {
+  --top-nav-height: 56px;
 }
-
 
 /* Large clickable tiles (links/buttons) */
 .flex-item {
-    font-size: clamp(1.6rem, min(10vw, 10vh), 6rem);
-    font-weight: bold;
-    color: #333333;
-    text-align: center;
-    text-decoration: none;
+  font-size: clamp(1.6rem, min(10vw, 10vh), 6rem);
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* Hover state for large tiles */
 .flex-item:hover {
-    background-color: #333333;
-    color: #FFEEDC;
+  background-color: #333333;
+  color: #ffeedc;
 }
 
 .phone-photo {
-    width: 40vw;
-    height: auto;
+  width: 40vw;
+  height: auto;
 }
 
 /* Hover state for top navigation items */
 .flex-item-top:hover {
-    background-color: #333333;
-    color: #FFEEDC;
+  background-color: #333333;
+  color: #ffeedc;
 }
 
 .list-start {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    border: 2px solid #EFD2B8;
-    border-radius: 2%;
-    padding: 5%;
-    background-color: #F5DCC6;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 2px solid #efd2b8;
+  border-radius: 2%;
+  padding: 5%;
+  background-color: #f5dcc6;
 }
 
 .list-start li {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
 
 /* .content-item {
 
 } */
 
-
-/* Position logo within flex layouts */
+/* Position logo within flex layouts 
 .logo {
     order: 1;
     width: 45vw;
 }
+    */
 
 #todo {
-    width: 65vw;
+  width: 65vw;
 }
 
+img {
+  width: 100%;
+}
 
 /* Responsive tweaks for tablets and larger screens */
 @media (min-width: 481px) {
+  :root {
+    --top-nav-height: 64px;
+  }
 
-    :root {
-        --top-nav-height: 64px;
-    }
+  .list-start:hover {
+    border-color: #04030281;
+    background-color: #f6e0cc;
+  }
 
-    .list-start:hover {
-        border-color: #04030281;
-        background-color: #f6e0cc;
-    }
+  /* Base font size for all elements on larger screens */
+  * {
+    font-size: 20px;
+  }
 
-    /* Base font size for all elements on larger screens */
-    * {
-        font-size: 20px;
-    }
+  /* Remove large margins from tiles on wider displays */
+  .flex-item {
+    margin: 0vw;
+  }
 
-    /* Remove large margins from tiles on wider displays */
-    .flex-item {
-        margin: 0vw;
-    }
+  /* Refine top navigation item sizing on larger screens */
+  .flex-item-top {
+    font-size: 24px;
+  }
 
-    /* Refine top navigation item sizing on larger screens */
-    .flex-item-top {
-        font-size: 24px;
-    }
+  /* Set a fixed logo width for larger viewports */
+  .logo {
+    width: 15vw;
+  }
 
-    /* Set a fixed logo width for larger viewports */
-    .logo {
-        width: 15vw;
-    }
+  #todo {
+    width: 30vw;
+  }
 
-    #todo {
-        width: 30vw;
-    }
+  #roadmap {
+    width: 25vw;
+  }
 
-    #roadmap {
-        width: 25vw;
-    }
-
-    #discord_bot_popup {
-        width: 45%;
-    }
+  #discord_bot_popup {
+    width: 45%;
+  }
 }
