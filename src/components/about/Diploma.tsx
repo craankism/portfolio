@@ -11,7 +11,7 @@ import {
   ListSubheader,
   Typography,
 } from "@mui/material";
-import { ArrowRight, ChevronLeft, ChevronRight } from "@mui/icons-material";
+import { Circle, ChevronLeft, ChevronRight } from "@mui/icons-material";
 import DiplomaImg1 from "../../assets/Diplom Full-Stack Developer1.jpg";
 import DiplomaImg2 from "../../assets/Diplom Full-Stack Developer2.jpg";
 

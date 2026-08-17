@@ -12,7 +12,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { ArrowRight } from "@mui/icons-material";
+import { Circle } from "@mui/icons-material";
 import {
   githubLogoStyleMD,
   githubLogoStyleXS,
@@ -57,61 +57,61 @@ const Sorter = (): JSX.Element => {
           <ListSubheader>Unsorted Input:</ListSubheader>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Wishek" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Davilla" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Vanalstyne" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Tiesiding" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Honaunau" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Volin" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Caledonia" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Monon" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Loraine" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Renville" />
           </ListItem>
@@ -122,61 +122,61 @@ const Sorter = (): JSX.Element => {
           <ListSubheader>Sorted Output:</ListSubheader>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Caledonia" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Davilla" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Honaunau" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Loraine" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Monon" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Renville" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Tiesiding" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Vanalstyne" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Volin" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Wishek" />
           </ListItem>

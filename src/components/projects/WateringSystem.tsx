@@ -14,7 +14,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { ArrowRight } from "@mui/icons-material";
+import { Circle } from "@mui/icons-material";
 import {
   githubLogoStyleMD,
   githubLogoStyleXS,
@@ -67,61 +67,61 @@ const WateringSystem = (): JSX.Element => {
           <ListSubheader>Hardware used:</ListSubheader>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Arduino Uno R4 WiFi" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Modulino Thermo" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Modulino Buzzer" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Soil moisture sensor (capacitive)" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="OLED Display (128x64 SSD1306)" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Breadboard" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Water pump" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Water rings" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Silicone hose" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Relay module" />
           </ListItem>

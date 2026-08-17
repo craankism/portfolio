@@ -14,7 +14,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { ArrowRight } from "@mui/icons-material";
+import { Circle } from "@mui/icons-material";
 import {
   githubLogoStyleMD,
   githubLogoStyleXS,
@@ -62,48 +62,42 @@ const DiscordBot = (): JSX.Element => {
           <ListSubheader>Technologies used:</ListSubheader>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="JavaScript" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Node" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="discord.js" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Discord" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Docker/Docker Compose" />
           </ListItem>
         </List>
       </Grid>
       <Grid size={{ xs: 12, md: 6 }}>
-        <img
-          src={discordBotPopup}
-          alt="Full photo of discord pop up"
-        />
+        <img src={discordBotPopup} alt="Full photo of discord pop up" />
       </Grid>
 
       <Grid size={12}>
-        <img
-          src={discordBotICS}
-          alt="Full photo of the discord ics response"
-        />
+        <img src={discordBotICS} alt="Full photo of the discord ics response" />
       </Grid>
     </Grid>
   );

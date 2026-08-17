@@ -11,7 +11,7 @@ import {
   ListSubheader,
   Typography,
 } from "@mui/material";
-import { ArrowRight } from "@mui/icons-material";
+import { Circle } from "@mui/icons-material";
 
 type AboutSection = {
   title: string;
@@ -90,7 +90,7 @@ const Me = (): JSX.Element => {
         </a>
       </Grid>
       <Grid size={6}>
-        <Box sx={{width: {md: "25vw"}}}>
+        <Box sx={{ width: { md: "25vw" } }}>
           <img
             src="https://roadmap.sh/card/wide/687e7516d8402b4cbdcdfc33?variant=dark&roadmaps=java%2Cjavascript%2Csql%2Cfull-stack"
             alt="roadmap.sh profile roadmap"

@@ -22,7 +22,7 @@ import {
   useMediaQuery,
   ListSubheader,
 } from "@mui/material";
-import { ArrowRight, ChevronLeft, ChevronRight } from "@mui/icons-material";
+import { Circle, ChevronLeft, ChevronRight } from "@mui/icons-material";
 import {
   githubLogoStyleXS,
   githubLogoStyleMD,
@@ -135,37 +135,37 @@ const SchroedingersChat = (): JSX.Element => {
           <ListSubheader>Key Features:</ListSubheader>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Real-time collaborative document editing (Yjs/Hocuspocus)" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Local AI assistant with GPU/CPU auto-detection" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Secure object storage via MinIO" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Role-based access control with Super Admin provisioning" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="AES encryption for sensitive data" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="JWT authentication with refresh tokens" />
           </ListItem>
@@ -177,37 +177,37 @@ const SchroedingersChat = (): JSX.Element => {
           <ListSubheader>Tech Stack:</ListSubheader>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="React (TypeScript) + Material UI + Zustand" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Spring Boot 4.1 (Java) + Hibernate/JPA" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Hocuspocus v2.15.3 (Node.js v22)" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="PostgreSQL + MinIO" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Ollama AI (qwen2.5-coder)" />
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <ArrowRight />
+              <Circle sx={{ fontSize: "0.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Nginx + Docker Compose" />
           </ListItem>
