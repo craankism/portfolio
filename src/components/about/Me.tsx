@@ -126,7 +126,7 @@ const Me = (): JSX.Element => {
                   {typeof item === "string" ? (
                     <>
                       <ListItemIcon>
-                        <ArrowRight />
+                        <Circle sx={{ fontSize: "0.5rem" }} />
                       </ListItemIcon>
                       <ListItemText primary={item} />
                     </>
