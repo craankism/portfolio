@@ -46,25 +46,22 @@ const Home = (): JSX.Element => {
           </Stack>
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <Button
+          <Box
             onClick={() =>
-              window.open("https://github.com/craankism", "_blank")
+              window.open(
+                "https://github.com/craankism/schroedingers_chat",
+                "_blank",
+              )
             }
-            sx={{ "&:hover": { background: "none" } }}
+            sx={{ cursor: "pointer" }}
           >
-            <Box
-              component="img"
+            <img
+              className="content-item logo"
               src={turtleDuck}
-              alt="Turtle Duck from Avatar"
-              sx={{
-                width: { xs: "70vw", md: "30vw" },
-                borderRadius: "50%",
-                "&:hover": {
-                  boxShadow: "0 0 20px #333333",
-                },
-              }}
+              alt="GitLab Link to Repository"
+              style={{ width: "100%" }}
             />
-          </Button>
+          </Box>
         </Grid>
       </Grid>
       <ProjectMenuModal />
