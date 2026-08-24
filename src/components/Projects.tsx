@@ -43,7 +43,7 @@ const Projects = (): JSX.Element => {
         });
         setSelectedProject(null);
       }
-    }, 100);
+    }, 500);
 
     return () => clearTimeout(timeoutId);
   }, [selectedProject, setSelectedProject]);
