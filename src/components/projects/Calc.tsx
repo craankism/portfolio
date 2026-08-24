@@ -47,7 +47,7 @@ const Calc = (): JSX.Element => {
       <Grid size={12}>
         <Box
           onClick={() => window.open("https://calc.craankism.com")}
-          sx={{ cursor: "pointer", width: { md: "30vw" }, mx: "auto" }}
+          sx={{ cursor: "pointer", width: { xs: "60vw",md: "20vw" }, mx: "auto" }}
         >
           <img src={calcImage} alt="Calculator Demo" />
         </Box>
