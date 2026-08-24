@@ -11,6 +11,7 @@ const Home = (): JSX.Element => {
     <>
       <Grid
         container
+        spacing={2}
         sx={{
           textAlign: "center",
           alignItems: "center",
