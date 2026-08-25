@@ -2,30 +2,9 @@
   --top-nav-height: 56px;
 }
 
-/* Large clickable tiles (links/buttons) */
-.flex-item {
-  font-size: clamp(1.6rem, min(10vw, 10vh), 6rem);
-  font-weight: bold;
-  color: #333333;
-  text-align: center;
-  text-decoration: none;
-}
-
-/* Hover state for large tiles */
-.flex-item:hover {
-  background-color: #333333;
-  color: #ffeedc;
-}
-
 .phone-photo {
   width: 40vw;
   height: auto;
-}
-
-/* Hover state for top navigation items */
-.flex-item-top:hover {
-  background-color: #333333;
-  color: #ffeedc;
 }
 
 .list-start {
@@ -41,17 +20,6 @@
 .list-start li {
   margin-top: 10px;
 }
-
-/* .content-item {
-
-} */
-
-/* Position logo within flex layouts 
-.logo {
-    order: 1;
-    width: 45vw;
-}
-    */
 
 #todo {
   width: 65vw;
@@ -75,21 +43,6 @@ img {
   /* Base font size for all elements on larger screens */
   * {
     font-size: 20px;
-  }
-
-  /* Remove large margins from tiles on wider displays */
-  .flex-item {
-    margin: 0vw;
-  }
-
-  /* Refine top navigation item sizing on larger screens */
-  .flex-item-top {
-    font-size: 24px;
-  }
-
-  /* Set a fixed logo width for larger viewports */
-  .logo {
-    width: 15vw;
   }
 
   #todo {
