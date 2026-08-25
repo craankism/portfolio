@@ -74,6 +74,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          borderBottomWidth: "2px",
+        },
+      },
+    },
     MuiAppBar: {
       styleOverrides: {
         root: {

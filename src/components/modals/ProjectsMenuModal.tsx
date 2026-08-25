@@ -1,21 +1,10 @@
 import Modal from "@mui/material/Modal";
 import type { JSX } from "@emotion/react/jsx-runtime";
 import { usePropStore } from "../../stores/PropStore";
-import { Button, Stack } from "@mui/material";
+import { Button, Divider, Stack } from "@mui/material";
 import { useNavigate } from "react-router";
 import { Star } from "@mui/icons-material";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 350,
-  bgcolor: "#F5DCC6",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+import { modalStyle } from "../../constants/modalStyle";
 
 const projects = [
   "Schroedinger's Chat",
@@ -45,7 +34,9 @@ const ProjectMenuModal = (): JSX.Element => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Stack sx={style} spacing={2}>
+      <Stack sx={modalStyle} spacing={2}>
+        <Button onClick={() => navigate("/projects")}>Projects</Button>
+        <Divider />
         {projects.map((project) => (
           <Button key={project} onClick={() => handleProjectClick(project)}>
             {project === "Schroedinger's Chat" ? <Star /> : ""}
