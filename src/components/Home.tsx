@@ -49,15 +49,18 @@ const Home = (): JSX.Element => {
         <Grid size={{ xs: 12, md: 6 }}>
           <Box
             onClick={() =>
-              window.open(
-                "https://github.com/craankism/schroedingers_chat",
-                "_blank",
-              )
+              window.open("https://github.com/craankism", "_blank")
             }
-            sx={{ cursor: "pointer" }}
+            sx={{
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                opacity: 0.8,
+                transform: "scale(1.02)",
+              },
+            }}
           >
             <img
-              className="content-item logo"
               src={turtleDuck}
               alt="GitLab Link to Repository"
               style={{ width: "100%" }}
