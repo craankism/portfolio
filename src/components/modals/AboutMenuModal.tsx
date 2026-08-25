@@ -27,7 +27,14 @@ const AboutMenuModal = (): JSX.Element => {
       aria-describedby="modal-modal-description"
     >
       <Stack sx={modalStyle} spacing={2}>
-        <Button onClick={() => navigate("/about")}>About me</Button>
+        <Button
+          onClick={() => {
+            setOpenAboutModal(false);
+            navigate("/about");
+          }}
+        >
+          About me
+        </Button>
         <Divider />
         {about.map((about) => (
           <Button key={about} onClick={() => handleAboutClick(about)}>

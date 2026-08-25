@@ -35,7 +35,14 @@ const ProjectMenuModal = (): JSX.Element => {
       aria-describedby="modal-modal-description"
     >
       <Stack sx={modalStyle} spacing={2}>
-        <Button onClick={() => navigate("/projects")}>Projects</Button>
+        <Button
+          onClick={() => {
+            setOpenProjectsModal(false);
+            navigate("/projects");
+          }}
+        >
+          Projects
+        </Button>
         <Divider />
         {projects.map((project) => (
           <Button key={project} onClick={() => handleProjectClick(project)}>
