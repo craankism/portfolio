@@ -2,11 +2,6 @@
   --top-nav-height: 56px;
 }
 
-.phone-photo {
-  width: 40vw;
-  height: auto;
-}
-
 .list-start {
   display: flex;
   flex-direction: column;
@@ -43,17 +38,5 @@ img {
   /* Base font size for all elements on larger screens */
   * {
     font-size: 20px;
-  }
-
-  #todo {
-    width: 30vw;
-  }
-
-  #roadmap {
-    width: 25vw;
-  }
-
-  #discord_bot_popup {
-    width: 45%;
   }
 }
