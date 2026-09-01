@@ -1,5 +1,4 @@
 import type { JSX } from "react";
-import "./App.css";
 import Home from "./components/Home";
 import { Route, Routes, useLocation } from "react-router";
 import Projects from "./components/Projects";

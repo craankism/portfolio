@@ -40,7 +40,6 @@ const DiscordBot = (): JSX.Element => {
           sx={{ cursor: "pointer" }}
         >
           <img
-            className="content-item logo"
             src={githubLogo}
             alt="GitLab Link to Repository"
             style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
@@ -49,7 +48,7 @@ const DiscordBot = (): JSX.Element => {
       </Grid>
 
       <Grid size={12}>
-        <p className="content-item">
+        <p>
           I created a discord bot, to create appointments with a simple command.
           If you type /calendar in discord, the bot answers with a pop-up form,
           where you can enter details of the appointment. After the details are
@@ -58,7 +57,7 @@ const DiscordBot = (): JSX.Element => {
         </p>
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <List className="content-item list-start">
+        <List className="list-start">
           <ListSubheader>Technologies used:</ListSubheader>
           <ListItem>
             <ListItemIcon>

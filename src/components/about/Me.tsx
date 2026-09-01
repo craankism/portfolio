@@ -82,11 +82,7 @@ const Me = (): JSX.Element => {
       </Grid>
       <Grid size={6}>
         <a href="https://github.com/craankism">
-          <img
-            className="content-item logo"
-            src={githubLogo}
-            alt="GitHub Link to Repository"
-          />
+          <img src={githubLogo} alt="GitHub Link to Repository" />
         </a>
       </Grid>
       <Grid size={6}>

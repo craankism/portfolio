@@ -64,7 +64,6 @@ const SchroedingersChat = (): JSX.Element => {
           sx={{ cursor: "pointer" }}
         >
           <img
-            className="content-item logo"
             src={githubLogo}
             alt="GitLab Link to Repository"
             style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
@@ -131,7 +130,7 @@ const SchroedingersChat = (): JSX.Element => {
       </Grid>
 
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <List className="content-item list-start">
+        <List className="list-start">
           <ListSubheader>Key Features:</ListSubheader>
           <ListItem>
             <ListItemIcon>
@@ -173,7 +172,7 @@ const SchroedingersChat = (): JSX.Element => {
       </Grid>
 
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <List className="content-item list-start">
+        <List className="list-start">
           <ListSubheader>Tech Stack:</ListSubheader>
           <ListItem>
             <ListItemIcon>

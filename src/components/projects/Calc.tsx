@@ -27,7 +27,6 @@ const Calc = (): JSX.Element => {
           sx={{ cursor: "pointer" }}
         >
           <img
-            className="content-item logo"
             src={githubLogo}
             alt="GitLab Link to Repository"
             style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
@@ -35,7 +34,7 @@ const Calc = (): JSX.Element => {
         </Box>
       </Grid>
       <Grid size={12}>
-        <p className="content-item">
+        <p>
           I build a simple calculator application on a webserver using HTML,
           CSS, and JavaScript for the Frontend, Go for the Backend and GitHub
           Actions for the CI/CD workflow. The application is currently displayed
@@ -47,7 +46,11 @@ const Calc = (): JSX.Element => {
       <Grid size={12}>
         <Box
           onClick={() => window.open("https://calc.craankism.com")}
-          sx={{ cursor: "pointer", width: { xs: "60vw",md: "20vw" }, mx: "auto" }}
+          sx={{
+            cursor: "pointer",
+            width: { xs: "60vw", md: "20vw" },
+            mx: "auto",
+          }}
         >
           <img src={calcImage} alt="Calculator Demo" />
         </Box>

@@ -39,7 +39,6 @@ const Sorter = (): JSX.Element => {
           sx={{ cursor: "pointer" }}
         >
           <img
-            className="content-item logo"
             src={githubLogo}
             alt="GitLab Link to Repository"
             style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
@@ -53,7 +52,7 @@ const Sorter = (): JSX.Element => {
         automatically deploy new releases.
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <List className="content-item list-start">
+        <List className="list-start">
           <ListSubheader>Unsorted Input:</ListSubheader>
           <ListItem>
             <ListItemIcon>
@@ -118,7 +117,7 @@ const Sorter = (): JSX.Element => {
         </List>
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <List className="content-item list-start">
+        <List className="list-start">
           <ListSubheader>Sorted Output:</ListSubheader>
           <ListItem>
             <ListItemIcon>
