@@ -1,8 +1,6 @@
 import type { JSX } from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
-  Box,
-  Button,
   Grid,
   List,
   ListItem,
@@ -11,9 +9,10 @@ import {
   ListSubheader,
   Typography,
 } from "@mui/material";
-import { Circle, ChevronLeft, ChevronRight } from "@mui/icons-material";
+import { Circle } from "@mui/icons-material";
 import DiplomaImg1 from "../../assets/Diplom Full-Stack Developer1.jpg";
 import DiplomaImg2 from "../../assets/Diplom Full-Stack Developer2.jpg";
+import ImageSlider from "../reusables/ImageSlider";
 
 type AboutSection = {
   title: string;
@@ -81,8 +80,6 @@ const Diploma = (): JSX.Element => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   return (
     <Grid
       container
@@ -92,58 +89,11 @@ const Diploma = (): JSX.Element => {
       <Grid size={12}>
         <Typography variant="h1">Diploma</Typography>
       </Grid>
-      <Grid
-        container
-        spacing={0}
-        size={12}
-        sx={{ alignItems: "stretch", justifyContent: "center" }}
-      >
-        <Grid size={1} sx={{ display: "flex" }}>
-          <Button
-            onClick={() =>
-              setCurrentImageIndex(
-                (prev) => (prev - 1 + images.length) % images.length,
-              )
-            }
-            sx={{
-              minWidth: { xs: "auto", sm: "64px" },
-              p: { xs: 0.5, sm: 1 },
-              height: "100%",
-            }}
-          >
-            <ChevronLeft />
-          </Button>
-        </Grid>
-        <Grid size={10}>
-          <Box
-            sx={{
-              px: { xs: 0.5, sm: 1 },
-              width: { md: "40vw" },
-              justifySelf: "center",
-            }}
-          >
-            <img
-              src={images[currentImageIndex]}
-              alt="Screenshots of Schroedinger's Chat application"
-              loading="lazy"
-            />
-          </Box>
-        </Grid>
-        <Grid size={1} sx={{ display: "flex" }}>
-          <Button
-            onClick={() =>
-              setCurrentImageIndex((prev) => (prev + 1) % images.length)
-            }
-            sx={{
-              minWidth: { xs: "auto", sm: "64px" },
-              p: { xs: 0.5, sm: 1 },
-              height: "100%",
-            }}
-          >
-            <ChevronRight />
-          </Button>
-        </Grid>
-      </Grid>
+      <ImageSlider
+        images={images}
+        alt="Screenshots of Schroedinger's Chat application"
+        boxSx={{ width: { md: "40vw" }, justifySelf: "center" }}
+      />
       <Grid
         container
         spacing={2}
