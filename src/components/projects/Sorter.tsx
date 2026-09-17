@@ -1,26 +1,24 @@
 import type { JSX } from "react";
-import githubLogo from "../../assets/GitHub_Invertocat_Black.svg";
-import {
-  Box,
-  Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  ListSubheader,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import { Circle } from "@mui/icons-material";
-import {
-  githubLogoStyleMD,
-  githubLogoStyleXS,
-} from "../../constants/githubLogoStyle";
+import { Grid, Typography } from "@mui/material";
+import GithubLogoLink from "../reusables/GithubLogoLink";
+import BulletList from "../reusables/BulletList";
+
+const unsortedNames = [
+  "Wishek",
+  "Davilla",
+  "Vanalstyne",
+  "Tiesiding",
+  "Honaunau",
+  "Volin",
+  "Caledonia",
+  "Monon",
+  "Loraine",
+  "Renville",
+];
+
+const sortedNames = [...unsortedNames].sort();
 
 const Sorter = (): JSX.Element => {
-  const theme = useTheme();
-  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Grid
       container
@@ -32,18 +30,7 @@ const Sorter = (): JSX.Element => {
       </Grid>
 
       <Grid size={12}>
-        <Box
-          onClick={() =>
-            window.open("https://github.com/craankism/sorter", "_blank")
-          }
-          sx={{ cursor: "pointer" }}
-        >
-          <img
-            src={githubLogo}
-            alt="GitLab Link to Repository"
-            style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
-          />
-        </Box>
+        <GithubLogoLink href="https://github.com/craankism/sorter" />
       </Grid>
 
       <Grid size={12}>
@@ -52,134 +39,10 @@ const Sorter = (): JSX.Element => {
         automatically deploy new releases.
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <List className="list-start">
-          <ListSubheader>Unsorted Input:</ListSubheader>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Wishek" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Davilla" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Vanalstyne" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Tiesiding" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Honaunau" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Volin" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Caledonia" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Monon" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Loraine" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Renville" />
-          </ListItem>
-        </List>
+        <BulletList title="Unsorted Input:" items={unsortedNames} />
       </Grid>
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <List className="list-start">
-          <ListSubheader>Sorted Output:</ListSubheader>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Caledonia" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Davilla" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Honaunau" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Loraine" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Monon" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Renville" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Tiesiding" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Vanalstyne" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Volin" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Wishek" />
-          </ListItem>
-        </List>
+        <BulletList title="Sorted Output:" items={sortedNames} />
       </Grid>
     </Grid>
   );

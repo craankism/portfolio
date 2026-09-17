@@ -10,6 +10,12 @@ type ImageSliderProps = {
   imgStyle?: React.CSSProperties;
 };
 
+const navButtonSx = {
+  minWidth: { xs: "auto", sm: "64px" },
+  p: { xs: 0.5, sm: 1 },
+  height: "100%",
+};
+
 const ImageSlider = ({
   images,
   alt,
@@ -17,6 +23,12 @@ const ImageSlider = ({
   imgStyle,
 }: ImageSliderProps): JSX.Element => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // +images.length keeps the result positive before wrapping via modulo
+  const showPrevious = () =>
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  const showNext = () =>
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
 
   return (
     <Grid
@@ -26,18 +38,7 @@ const ImageSlider = ({
       sx={{ alignItems: "stretch", justifyContent: "center" }}
     >
       <Grid size={1} sx={{ display: "flex" }}>
-        <Button
-          onClick={() =>
-            setCurrentImageIndex(
-              (prev) => (prev - 1 + images.length) % images.length,
-            )
-          }
-          sx={{
-            minWidth: { xs: "auto", sm: "64px" },
-            p: { xs: 0.5, sm: 1 },
-            height: "100%",
-          }}
-        >
+        <Button onClick={showPrevious} sx={navButtonSx}>
           <ChevronLeft />
         </Button>
       </Grid>
@@ -52,16 +53,7 @@ const ImageSlider = ({
         </Box>
       </Grid>
       <Grid size={1} sx={{ display: "flex" }}>
-        <Button
-          onClick={() =>
-            setCurrentImageIndex((prev) => (prev + 1) % images.length)
-          }
-          sx={{
-            minWidth: { xs: "auto", sm: "64px" },
-            p: { xs: 0.5, sm: 1 },
-            height: "100%",
-          }}
-        >
+        <Button onClick={showNext} sx={navButtonSx}>
           <ChevronRight />
         </Button>
       </Grid>

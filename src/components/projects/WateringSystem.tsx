@@ -1,28 +1,24 @@
 import type { JSX } from "react";
-import githubLogo from "../../assets/GitHub_Invertocat_Black.svg";
 import wateringSystem1 from "../../assets/watering_system1.jpg";
 import wateringSystem2 from "../../assets/watering_system2.jpg";
-import {
-  Box,
-  Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  ListSubheader,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import { Circle } from "@mui/icons-material";
-import {
-  githubLogoStyleMD,
-  githubLogoStyleXS,
-} from "../../constants/githubLogoStyle";
+import { Grid, Typography } from "@mui/material";
+import GithubLogoLink from "../reusables/GithubLogoLink";
+import BulletList from "../reusables/BulletList";
+
+const hardware = [
+  "Arduino Uno R4 WiFi",
+  "Modulino Thermo",
+  "Modulino Buzzer",
+  "Soil moisture sensor (capacitive)",
+  "OLED Display (128x64 SSD1306)",
+  "Breadboard",
+  "Water pump",
+  "Water rings",
+  "Silicone hose",
+  "Relay module",
+];
 
 const WateringSystem = (): JSX.Element => {
-  const theme = useTheme();
-  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Grid
       container
@@ -33,21 +29,7 @@ const WateringSystem = (): JSX.Element => {
         <Typography variant="h1">Watering System</Typography>
       </Grid>
       <Grid size={12}>
-        <Box
-          onClick={() =>
-            window.open(
-              "https://github.com/craankism/automatic_watering_system",
-              "_blank",
-            )
-          }
-          sx={{ cursor: "pointer" }}
-        >
-          <img
-            src={githubLogo}
-            alt="GitLab Link to Repository"
-            style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
-          />
-        </Box>
+        <GithubLogoLink href="https://github.com/craankism/automatic_watering_system" />
       </Grid>
 
       <Grid size={12}>
@@ -62,69 +44,7 @@ const WateringSystem = (): JSX.Element => {
       </Grid>
 
       <Grid size={{ xs: 12, md: 6 }} sx={{ textAlign: "left" }}>
-        <List className="list-start">
-          <ListSubheader>Hardware used:</ListSubheader>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Arduino Uno R4 WiFi" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Modulino Thermo" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Modulino Buzzer" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Soil moisture sensor (capacitive)" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="OLED Display (128x64 SSD1306)" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Breadboard" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Water pump" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Water rings" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Silicone hose" />
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <Circle sx={{ fontSize: "0.5rem" }} />
-            </ListItemIcon>
-            <ListItemText primary="Relay module" />
-          </ListItem>
-        </List>
+        <BulletList title="Hardware used:" items={hardware} />
       </Grid>
       <Grid size={{ xs: 12, md: 6 }}>
         <img

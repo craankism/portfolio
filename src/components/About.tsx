@@ -1,7 +1,8 @@
 import { Box } from "@mui/material";
 import type { JSX } from "react";
-import { useEffect, useRef } from "react";
+import { useMemo, useRef } from "react";
 import { usePropStore } from "../stores/PropStore";
+import { useScrollToSection } from "../hooks/useScrollToSection";
 import Me from "./about/Me";
 import Diploma from "./about/Diploma";
 
@@ -11,30 +12,14 @@ const About = (): JSX.Element => {
   const diplomaRef = useRef<HTMLDivElement>(null);
   const meRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!selectedAbout) return;
+  const sectionRefs = useMemo(() => ({ Me: meRef, Diploma: diplomaRef }), []);
 
-    const projectRefs: Record<
-      string,
-      React.RefObject<HTMLDivElement | null>
-    > = {
-      Me: meRef,
-      Diploma: diplomaRef,
-    };
-
-    // Delay scroll to ensure components are rendered
-    const timeoutId = setTimeout(() => {
-      if (projectRefs[selectedAbout]) {
-        projectRefs[selectedAbout].current?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-        setSelectedAbout(null);
-      }
-    }, 100);
-
-    return () => clearTimeout(timeoutId);
-  }, [selectedAbout, setSelectedAbout]);
+  useScrollToSection(
+    selectedAbout,
+    () => setSelectedAbout(null),
+    sectionRefs,
+    100,
+  );
 
   return (
     <Box sx={{ mt: 10, textAlign: "center", alignItems: "center" }}>

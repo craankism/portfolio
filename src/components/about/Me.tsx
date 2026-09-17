@@ -1,17 +1,8 @@
 import type { JSX } from "react";
 import { useEffect } from "react";
 import githubLogo from "../../assets/GitHub_Lockup_Black.svg";
-import {
-  Box,
-  Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  ListSubheader,
-  Typography,
-} from "@mui/material";
-import { Circle } from "@mui/icons-material";
+import { Box, Grid, Typography } from "@mui/material";
+import BulletList from "../reusables/BulletList";
 
 type AboutSection = {
   title: string;
@@ -115,23 +106,7 @@ const Me = (): JSX.Element => {
             size={{ xs: 12, md: 6 }}
             sx={{ textAlign: "left" }}
           >
-            <List className="list-start">
-              <ListSubheader>{section.title}</ListSubheader>
-              {section.items.map((item, index) => (
-                <ListItem key={`${section.title}-${index}`}>
-                  {typeof item === "string" ? (
-                    <>
-                      <ListItemIcon>
-                        <Circle sx={{ fontSize: "0.5rem" }} />
-                      </ListItemIcon>
-                      <ListItemText primary={item} />
-                    </>
-                  ) : (
-                    item
-                  )}
-                </ListItem>
-              ))}
-            </List>
+            <BulletList title={section.title} items={section.items} />
           </Grid>
         ))}
       </Grid>

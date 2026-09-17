@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import type { JSX } from "react";
-import { useEffect, useRef } from "react";
+import { useMemo, useRef } from "react";
 import SchroedingersChat from "./projects/SchroedingersChat";
 import WateringSystem from "./projects/WateringSystem";
 import Calc from "./projects/Calc";
@@ -8,6 +8,7 @@ import Sorter from "./projects/Sorter";
 import Todo from "./projects/Todo";
 import DiscordBot from "./projects/DiscordBot";
 import { usePropStore } from "../stores/PropStore";
+import { useScrollToSection } from "../hooks/useScrollToSection";
 
 const Projects = (): JSX.Element => {
   const { selectedProject, setSelectedProject } = usePropStore();
@@ -19,34 +20,26 @@ const Projects = (): JSX.Element => {
   const todoRef = useRef<HTMLDivElement>(null);
   const discordRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!selectedProject) return;
-
-    const projectRefs: Record<
-      string,
-      React.RefObject<HTMLDivElement | null>
-    > = {
+  const projectRefs = useMemo(
+    () => ({
       "Schroedinger's Chat": schroedingersRef,
       "Watering System": wateringRef,
       Calculator: calcRef,
       Sorter: sorterRef,
       "To-Do List": todoRef,
       "Discord Bot": discordRef,
-    };
+    }),
+    [],
+  );
 
-    // Delay scroll to ensure components are rendered
-    const timeoutId = setTimeout(() => {
-      if (projectRefs[selectedProject]) {
-        projectRefs[selectedProject].current?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-        setSelectedProject(null);
-      }
-    }, 500);
-
-    return () => clearTimeout(timeoutId);
-  }, [selectedProject, setSelectedProject]);
+  // Longer delay than About: this page renders more/heavier project
+  // sections, so it needs extra time before scrollIntoView measures correctly
+  useScrollToSection(
+    selectedProject,
+    () => setSelectedProject(null),
+    projectRefs,
+    500,
+  );
 
   return (
     <Box sx={{ mt: 10, textAlign: "center", alignItems: "center" }}>

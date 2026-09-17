@@ -1,15 +1,9 @@
 import type { JSX } from "react";
-import githubLogo from "../../assets/GitHub_Invertocat_Black.svg";
 import todoImage from "../../assets/todo.png";
-import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
-import {
-  githubLogoStyleMD,
-  githubLogoStyleXS,
-} from "../../constants/githubLogoStyle";
+import { Box, Grid, Typography } from "@mui/material";
+import GithubLogoLink from "../reusables/GithubLogoLink";
 
 const Todo = (): JSX.Element => {
-  const theme = useTheme();
-  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Grid
       container
@@ -23,18 +17,7 @@ const Todo = (): JSX.Element => {
         <Typography variant="h1">To-Do List</Typography>
       </Grid>
       <Grid size={12}>
-        <Box
-          onClick={() =>
-            window.open("https://github.com/craankism/todo", "_blank")
-          }
-          sx={{ cursor: "pointer" }}
-        >
-          <img
-            src={githubLogo}
-            alt="GitLab Link to Repository"
-            style={isMdUp ? githubLogoStyleMD : githubLogoStyleXS}
-          />
-        </Box>
+        <GithubLogoLink href="https://github.com/craankism/todo" />
       </Grid>
       <Grid size={12}>
         This is a simple To-Do List. It is coded with Java and JavaFX. I also
